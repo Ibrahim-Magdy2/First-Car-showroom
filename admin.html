@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage the vehicle inventory and product catalog for Your Brand." />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Your Brand" />
+    <meta property="og:title" content="Your Brand | Catalog management" />
+    <meta property="og:description" content="Local catalog management demo for Your Brand." />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <title>Your Brand | Catalog management</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vehicle-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="admin">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Your Brand home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Your Brand</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="index.html" data-i18n="navHome">Home</a>
+          <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="products.html" data-i18n="navbarProducts">Products</a>
+        </nav>
+        <div class="control-row">
+          <button id="theme-toggle" class="icon-button" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
+          <div class="lang-switcher" aria-label="Language switcher" data-i18n-aria-label="languageSwitcher">
+            <button class="lang-option is-active" data-lang-option="en" aria-pressed="true">EN</button>
+            <button class="lang-option" data-lang-option="ar" aria-pressed="false">AR</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-page">
+      <div class="container">
+        <div class="admin-heading">
+          <div>
+            <span class="eyebrow" data-i18n="adminEyebrow">Local catalog management</span>
+            <h1 data-i18n="adminTitle">Manage your catalog</h1>
+          </div>
+          <a class="btn btn-secondary" href="inventory.html" data-i18n="navInventory">Inventory</a>
+        </div>
+
+        <div class="admin-local-notice" role="note">
+          <i class="fas fa-circle-info" aria-hidden="true"></i>
+          <p data-i18n="adminLocalNotice">Demo mode: changes are saved only in this browser and are not shared with visitors or other devices.</p>
+        </div>
+        <p id="admin-status" class="admin-status" role="status" aria-live="polite"></p>
+
+        <div class="admin-tabs" role="tablist" aria-label="Catalog sections">
+          <button class="admin-tab is-active" id="admin-vehicles-tab" type="button" role="tab" aria-selected="true" aria-controls="admin-vehicles-panel" data-admin-tab="vehicles" data-i18n="adminVehiclesTab">Vehicles</button>
+          <button class="admin-tab" id="admin-products-tab" type="button" role="tab" aria-selected="false" aria-controls="admin-products-panel" data-admin-tab="products" data-i18n="adminProductsTab">Products</button>
+        </div>
+
+        <section id="admin-vehicles-panel" class="admin-panel" role="tabpanel" aria-labelledby="admin-vehicles-tab" data-admin-panel="vehicles">
+          <div class="admin-list-heading">
+            <p id="admin-vehicle-count" class="admin-count"></p>
+            <button id="admin-add-vehicle" class="btn btn-primary" type="button"><i class="fas fa-plus" aria-hidden="true"></i> <span data-i18n="adminAddVehicle">Add vehicle</span></button>
+          </div>
+          <form id="vehicle-admin-form" class="admin-editor" hidden>
+            <h2 data-i18n="adminAddVehicle">Add vehicle</h2>
+            <div class="admin-form-grid">
+              <label class="form-field"><span data-i18n="adminBrand">Brand</span><input name="brand" required maxlength="60" /></label>
+              <label class="form-field"><span data-i18n="adminModel">Model</span><input name="model" required maxlength="60" /></label>
+              <label class="form-field"><span data-i18n="adminTrim">Trim</span><input name="trim" maxlength="60" /></label>
+              <label class="form-field"><span data-i18n="adminYear">Year</span><input name="year" type="number" min="1900" max="2100" required /></label>
+              <label class="form-field"><span data-i18n="adminPrice">Price (EGP)</span><input name="price" type="number" min="1" step="1" required /></label>
+              <label class="form-field"><span data-i18n="adminMileage">Mileage (km)</span><input name="mileage" type="number" min="0" step="1" required /></label>
+              <label class="form-field"><span data-i18n="adminHorsepower">Power (hp)</span><input name="horsepower" type="number" min="1" step="1" required /></label>
+              <label class="form-field"><span data-i18n="adminEngine">Engine</span><input name="engine" maxlength="80" required /></label>
+              <label class="form-field"><span data-i18n="adminSeats">Seats</span><input name="seats" type="number" min="1" max="20" step="1" required /></label>
+              <label class="form-field"><span data-i18n="adminTransmission">Transmission</span>
+                <select name="transmission" required>
+                  <option value="Automatic" data-i18n="inventoryAutomatic">Automatic</option>
+                  <option value="Manual" data-i18n="inventoryManual">Manual</option>
+                </select>
+              </label>
+              <label class="form-field"><span data-i18n="adminFuel">Fuel</span>
+                <select name="fuel" required>
+                  <option value="Petrol" data-i18n="inventoryPetrol">Petrol</option>
+                  <option value="Electric" data-i18n="inventoryElectric">Electric</option>
+                  <option value="Hybrid" data-i18n="inventoryHybrid">Hybrid</option>
+                </select>
+              </label>
+              <label class="form-field"><span data-i18n="adminBodyType">Body type</span>
+                <select name="bodyType" required>
+                  <option value="SUV" data-i18n="categorySUV">SUV</option>
+                  <option value="Sedan" data-i18n="categorySedan">Sedan</option>
+                  <option value="Coupe" data-i18n="categoryCoupe">Coupe</option>
+                  <option value="Sports" data-i18n="categorySports">Sports</option>
+                  <option value="Luxury" data-i18n="categoryLuxury">Luxury</option>
+                  <option value="Electric" data-i18n="categoryElectric">Electric</option>
+                </select>
+              </label>
+              <label class="form-field"><span data-i18n="adminCondition">Condition</span>
+                <select name="condition" required>
+                  <option value="New" data-i18n="inventoryNew">New</option>
+                  <option value="Certified" data-i18n="inventoryCertified">Certified</option>
+                  <option value="Pre-Owned" data-i18n="inventoryPreOwned">Pre-Owned</option>
+                </select>
+              </label>
+              <label class="form-field"><span data-i18n="adminAvailability">Availability</span>
+                <select name="availability" required>
+                  <option value="Available" data-i18n="detailsAvailable">Available</option>
+                  <option value="Limited" data-i18n="detailsLimited">Limited</option>
+                  <option value="Reserved" data-i18n="detailsReserved">Reserved</option>
+                </select>
+              </label>
+              <label class="form-field admin-form-wide"><span data-i18n="adminImage">Image URL or local file name</span><input name="image" type="text" required maxlength="500" /></label>
+              <label class="form-field admin-form-wide"><span data-i18n="adminDescription">Description (English)</span><textarea name="description" rows="3" maxlength="700" required></textarea></label>
+              <label class="form-field admin-form-wide"><span data-i18n="adminDescriptionAr">Description (Arabic)</span><textarea name="descriptionAr" rows="3" maxlength="700"></textarea></label>
+            </div>
+            <div class="admin-editor-actions">
+              <button class="btn btn-primary" type="submit" data-i18n="adminSaveVehicle">Save vehicle</button>
+              <button class="btn btn-secondary" type="button" data-admin-cancel data-i18n="adminCancel">Cancel</button>
+            </div>
+          </form>
+          <div id="admin-vehicle-list" class="admin-list"></div>
+        </section>
+
+        <section id="admin-products-panel" class="admin-panel" role="tabpanel" aria-labelledby="admin-products-tab" data-admin-panel="products" hidden>
+          <div class="admin-list-heading">
+            <p id="admin-product-count" class="admin-count"></p>
+            <button id="admin-add-product" class="btn btn-primary" type="button"><i class="fas fa-plus" aria-hidden="true"></i> <span data-i18n="adminAddProduct">Add product</span></button>
+          </div>
+          <form id="product-admin-form" class="admin-editor" hidden>
+            <h2 data-i18n="adminAddProduct">Add product</h2>
+            <div class="admin-form-grid">
+              <label class="form-field"><span data-i18n="adminProductName">Product name</span><input name="name" required maxlength="100" /></label>
+              <label class="form-field"><span data-i18n="adminProductNameAr">Product name (Arabic)</span><input name="nameAr" maxlength="100" /></label>
+              <label class="form-field"><span data-i18n="adminPrice">Price (EGP)</span><input name="price" type="number" min="0" step="1" required /></label>
+              <label class="form-field"><span data-i18n="adminQuantity">Quantity</span><input name="quantity" type="number" min="0" step="1" required /></label>
+              <label class="form-field admin-form-wide"><span data-i18n="adminImage">Image URL or local file name</span><input name="image" type="text" maxlength="500" /></label>
+              <label class="form-field admin-form-wide"><span data-i18n="adminProductDescription">Description</span><textarea name="description" rows="3" maxlength="700" required></textarea></label>
+              <label class="form-field admin-form-wide"><span data-i18n="adminProductDescriptionAr">Description (Arabic)</span><textarea name="descriptionAr" rows="3" maxlength="700"></textarea></label>
+            </div>
+            <div class="admin-editor-actions">
+              <button class="btn btn-primary" type="submit" data-i18n="adminSaveProduct">Save product</button>
+              <button class="btn btn-secondary" type="button" data-admin-cancel data-i18n="adminCancel">Cancel</button>
+            </div>
+          </form>
+          <div id="admin-product-list" class="admin-list"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

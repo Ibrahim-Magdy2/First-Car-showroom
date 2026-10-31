@@ -12,7 +12,7 @@ window.VEHICLES = [
     bodyType: 'Luxury',
     condition: 'New',
     availability: 'Available',
-    image: 'ben-weber-cdxeytNTsZo-unsplash.jpg',
+    image: 'assets/images/ben-weber-cdxeytNTsZo-unsplash.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
@@ -53,7 +53,7 @@ window.VEHICLES = [
     bodyType: 'SUV',
     condition: 'Certified',
     availability: 'Available',
-    image: 'pexels-limonovdigital-10507791.jpg',
+    image: 'assets/images/pexels-limonovdigital-10507791.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
@@ -217,7 +217,7 @@ window.VEHICLES = [
     bodyType: 'Luxury',
     condition: 'Certified',
     availability: 'Available',
-    image: 'pexels-mhd-wael-albonni-2153155641-32613935.jpg',
+    image: 'assets/images/pexels-mhd-wael-albonni-2153155641-32613935.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
@@ -299,7 +299,7 @@ window.VEHICLES = [
     bodyType: 'SUV',
     condition: 'Pre-Owned',
     availability: 'Available',
-    image: 'pexels-egeardaphotos-2148533277-37519992.jpg',
+    image: 'assets/images/pexels-egeardaphotos-2148533277-37519992.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80',

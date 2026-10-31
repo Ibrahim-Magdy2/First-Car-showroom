@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Your Brand offers premium luxury, performance, and electric vehicles with concierge support and tailored financing." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Your Brand" />
+    <meta property="og:title" content="Your Brand | Premium Car Dealership" />
+    <meta property="og:description" content="Explore premium vehicles, compare luxury cars, and discover tailored financing at Your Brand in Egypt." />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
     <title>Your Brand | Premium Car Dealership</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <script src="vehicle-data.js" defer></script>
@@ -23,6 +28,7 @@
 
         <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
           <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="products.html" data-i18n="navbarProducts">Products</a>
           <a href="sales.html" data-i18n="navSales">Sales</a>
           <a href="finance.html" data-i18n="navFinance">Finance</a>
           <a href="service.html" data-i18n="navService">Service</a>
@@ -94,21 +100,21 @@
           <p class="section-intro" data-i18n="interiorIntro">Crafted cabin experiences designed for comfort, technology, and confidence.</p>
           <div class="interior-grid">
             <article class="interior-card" data-reveal>
-              <img src="pexels-mohit-hambiria-92377455-17339319.jpg" alt="Executive lounge interior" />
+              <img src="assets/images/pexels-mohit-hambiria-92377455-17339319.jpg" alt="Executive lounge interior" loading="lazy" decoding="async" width="1280" height="1920" />
               <div class="interior-card__content">
                 <h3 data-i18n="interiorLounge">Executive Lounge</h3>
                 <p data-i18n="interiorDescription1">Premium leather, ambient lighting, and a cabin designed around effortless comfort.</p>
               </div>
             </article>
             <article class="interior-card" data-reveal>
-              <img src="pexels-jarne-aerts-3175149-6873675.jpg" alt="Driver-focused cabin" />
+              <img src="assets/images/pexels-jarne-aerts-3175149-6873675.jpg" alt="Driver-focused cabin" loading="lazy" decoding="async" width="1362" height="1920" />
               <div class="interior-card__content">
                 <h3 data-i18n="interiorDrive">Driver Focus</h3>
                 <p data-i18n="interiorDescription2">Minimal controls, digital intelligence, and precision surfaces for every trip.</p>
               </div>
             </article>
             <article class="interior-card" data-reveal>
-              <img src="pexels-tima-miroshnichenko-6872585.jpg" alt="Luxury interior detail" />
+              <img src="assets/images/pexels-tima-miroshnichenko-6872585.jpg" alt="Luxury interior detail" loading="lazy" decoding="async" width="1280" height="1920" />
               <div class="interior-card__content">
                 <h3 data-i18n="interiorSignature">Signature Finish</h3>
                 <p data-i18n="interiorDescription3">Textured trims, sculpted seats, and a premium atmosphere built to impress.</p>
@@ -321,7 +327,7 @@
           </div>
           <div class="news-grid">
             <article class="news-card">
-              <img src="pexels-photobombcars-11202317.jpg" alt="Electric vehicle news" />
+              <img src="assets/images/pexels-photobombcars-11202317.jpg" alt="Electric vehicle news" loading="lazy" decoding="async" width="1442" height="1920" />
               <div class="news-card__content">
                 <div class="meta"><span data-i18n="newsCategoryIndustry">Industry</span><span>April 12</span></div>
                 <h3 data-i18n="newsOneTitle">Electric luxury performance is shifting the market landscape.</h3>
@@ -329,7 +335,7 @@
               </div>
             </article>
             <article class="news-card">
-              <img src="pexels-a2pro-6509107.jpg" alt="Performance drive story" />
+              <img src="assets/images/pexels-a2pro-6509107.jpg" alt="Performance drive story" loading="lazy" decoding="async" width="1920" height="1080" />
               <div class="news-card__content">
                 <div class="meta"><span data-i18n="newsCategoryPerformance">Performance</span><span>April 19</span></div>
                 <h3 data-i18n="newsTwoTitle">What defines the modern grand tourer in 2025?</h3>
@@ -337,7 +343,7 @@
               </div>
             </article>
             <article class="news-card">
-              <img src="pexels-lgorincioi-8265503.jpg" alt="SUV and family mobility" />
+              <img src="assets/images/pexels-lgorincioi-8265503.jpg" alt="SUV and family mobility" loading="lazy" decoding="async" width="1280" height="1920" />
               <div class="news-card__content">
                 <div class="meta"><span data-i18n="newsCategoryMobility">Mobility</span><span>April 23</span></div>
                 <h3 data-i18n="newsThreeTitle">Luxury SUVs remain the benchmark for family-first travel.</h3>
@@ -415,6 +421,8 @@
         </div>
         <div class="footer-links">
           <a href="inventory.html">Inventory</a>
+          <a href="products.html" data-i18n="navbarProducts">Products</a>
+          <a href="admin.html" data-i18n="navAdmin">Manage catalog</a>
           <a href="#about">About</a>
           <a href="#offers">Offers</a>
           <a href="#contact">Contact</a>

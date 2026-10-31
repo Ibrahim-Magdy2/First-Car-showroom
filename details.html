@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Explore detailed specifications, features, gallery, financing, and test-drive booking for a selected premium vehicle." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Your Brand" />
+    <meta property="og:title" content="Your Brand | Vehicle Details" />
+    <meta property="og:description" content="Explore premium vehicle specifications, features, pricing, and test-drive options." />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
     <title>Your Brand | Vehicle Details</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <script src="vehicle-data.js" defer></script>
@@ -24,6 +29,7 @@
         <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
           <a href="index.html" data-i18n="navHome">Home</a>
           <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="products.html" data-i18n="navbarProducts">Products</a>
           <a href="index.html#offers" data-i18n="navbarOffers">Offers</a>
           <a href="index.html#contact" data-i18n="navbarContact">Contact</a>
         </nav>
@@ -40,6 +46,7 @@
     </header>
 
     <main class="detail-page">
+      <p id="vehicle-detail-empty" class="empty-card container" hidden data-i18n="detailsNoVehicles">This vehicle is no longer available in the inventory.</p>
       <div id="vehicle-detail-root" class="container">
         <section class="detail-hero" data-reveal>
           <div class="image-gallery">

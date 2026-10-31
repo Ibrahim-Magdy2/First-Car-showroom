@@ -1,6 +1,7 @@
 const TRANSlations = {
   en: {
     navbarInventory: 'Inventory',
+    navbarProducts: 'Products',
     navbarAbout: 'About',
     navbarOffers: 'Offers',
     navbarContact: 'Contact',
@@ -10,6 +11,7 @@ const TRANSlations = {
     navFinance: 'Finance',
     navService: 'Service',
     navRegister: 'Register',
+    navAdmin: 'Manage catalog',
     mainNavigation: 'Main navigation',
     languageSwitcher: 'Language switcher',
     heroEyebrow: 'Premium Performance',
@@ -80,6 +82,7 @@ const TRANSlations = {
     assistantTitle: 'Dealership Assistant',
     assistantOpen: 'Open Assistant',
     assistantAsk: 'Ask',
+    assistantThinking: 'Looking through the current inventory…',
     assistantPlaceholder: 'Ask about budget, features, or vehicle matching…',
     assistantDefault: 'I can recommend vehicles from the current inventory, explain differences, and help you book a test drive.',
     interiorTitle: 'Interior Collection',
@@ -192,6 +195,7 @@ const TRANSlations = {
     interiorDescription2: 'Minimal controls, digital intelligence, and precision surfaces for every trip.',
     interiorDescription3: 'Textured trims, sculpted seats, and a premium atmosphere built to impress.',
     detailsOverview: 'Overview',
+    detailsNoVehicles: 'This vehicle is no longer available in the inventory.',
     detailsTrim: 'Trim',
     detailsTechnicalSpecs: 'Technical Specs',
     detailsSimilarVehicles: 'Similar Vehicles',
@@ -249,6 +253,73 @@ const TRANSlations = {
     inventoryMileageHigh: 'Mileage: High to low',
     inventoryOldest: 'Oldest',
     inventoryVehicles: 'vehicles',
+    inventoryManageCatalog: 'Manage catalog',
+    productsEyebrow: 'Showroom essentials',
+    productsTitle: 'Products for every drive.',
+    productsIntro: 'Explore accessories and products curated for your vehicle.',
+    productsEmpty: 'No products are available yet. Please check back soon.',
+    productPrice: 'Price',
+    productStock: 'In stock',
+    productOutOfStock: 'Out of stock',
+    pageTitleProducts: 'Your Brand | Products',
+    adminEyebrow: 'Local catalog management',
+    adminTitle: 'Manage your catalog',
+    adminLocalNotice: 'Demo mode: changes are saved only in this browser and are not shared with visitors or other devices.',
+    adminVehiclesTab: 'Vehicles',
+    adminProductsTab: 'Products',
+    adminAddVehicle: 'Add vehicle',
+    adminAddProduct: 'Add product',
+    adminEditVehicleTitle: 'Edit vehicle',
+    adminEditProductTitle: 'Edit product',
+    adminEdit: 'Edit',
+    adminDelete: 'Delete',
+    adminCancel: 'Cancel',
+    adminSaveVehicle: 'Save vehicle',
+    adminSaveProduct: 'Save product',
+    adminVehicleCount: 'vehicles in inventory',
+    adminProductCount: 'products in catalog',
+    adminVehicleEmpty: 'No vehicles in the inventory yet.',
+    adminProductEmpty: 'No products in the catalog yet.',
+    adminVehicleSaved: 'Vehicle saved.',
+    adminProductSaved: 'Product saved.',
+    adminVehicleDeleted: 'Vehicle removed from inventory.',
+    adminProductDeleted: 'Product removed from catalog.',
+    adminRequiredFields: 'Please complete all required fields.',
+    seoHome: 'Explore premium vehicles in Egypt, compare luxury and performance cars, and get tailored financing at Your Brand.',
+    seoInventory: 'Browse and compare Your Brand premium car inventory in Egypt. Filter luxury, SUV, electric, and performance vehicles by price and features.',
+    seoDetails: 'Explore premium vehicle specifications, features, pricing, and test-drive options from Your Brand in Egypt.',
+    seoRegister: 'Contact Your Brand about premium vehicle sales, financing, or service in Egypt.',
+    seoSales: 'Find premium luxury and performance vehicles with personalized sales support at Your Brand in Egypt.',
+    seoFinance: 'Explore tailored financing and payment planning for premium car purchases at Your Brand in Egypt.',
+    seoService: 'Book premium vehicle maintenance and after-sales care with Your Brand in Egypt.',
+    seoProducts: 'Browse automotive accessories and products at Your Brand.',
+    seoAdmin: 'Local catalog management demo for Your Brand.',
+    adminInvalidPrice: 'Enter a valid price and inventory quantity.',
+    adminStorageError: 'Could not save your changes in this browser. Check available storage and try again.',
+    adminConfirmDelete: 'Remove this item?',
+    adminBrand: 'Brand',
+    adminModel: 'Model',
+    adminTrim: 'Trim',
+    adminYear: 'Year',
+    adminPrice: 'Price (EGP)',
+    adminMileage: 'Mileage (km)',
+    adminHorsepower: 'Power (hp)',
+    adminEngine: 'Engine',
+    adminSeats: 'Seats',
+    adminTransmission: 'Transmission',
+    adminFuel: 'Fuel',
+    adminBodyType: 'Body type',
+    adminCondition: 'Condition',
+    adminAvailability: 'Availability',
+    adminImage: 'Image URL or local file name',
+    adminDescription: 'Description (English)',
+    adminDescriptionAr: 'Description (Arabic)',
+    adminProductName: 'Product name',
+    adminProductNameAr: 'Product name (Arabic)',
+    adminProductDescription: 'Description',
+    adminProductDescriptionAr: 'Description (Arabic)',
+    adminQuantity: 'Quantity',
+    pageTitleAdmin: 'Your Brand | Catalog management',
     categorySUV: 'SUV',
     categorySedan: 'Sedan',
     categoryCoupe: 'Coupe',
@@ -272,6 +343,7 @@ const TRANSlations = {
   },
   ar: {
     navbarInventory: 'المخزون',
+    navbarProducts: 'المنتجات',
     navbarAbout: 'من نحن',
     navbarOffers: 'العروض',
     navbarContact: 'التواصل',
@@ -281,6 +353,7 @@ const TRANSlations = {
     navFinance: 'التمويل',
     navService: 'الخدمة',
     navRegister: 'التسجيل',
+    navAdmin: 'إدارة الكتالوج',
     mainNavigation: 'القائمة الرئيسية',
     languageSwitcher: 'اختيار اللغة',
     heroEyebrow: 'أداء فاخر',
@@ -351,6 +424,7 @@ const TRANSlations = {
     assistantTitle: 'مساعد المتجر',
     assistantOpen: 'فتح المساعد',
     assistantAsk: 'اسأل',
+    assistantThinking: 'أبحث في السيارات المتاحة الآن…',
     assistantPlaceholder: 'اسأل عن الميزانية أو المميزات أو التوافق…',
     assistantDefault: 'أستطيع أن أوصي بالسيارات من المخزون الحالي، وأشرح الفروق، وأرشدك لحجز اختبار قيادة.',
     assistantGreeting: 'مرحباً! أنا مساعد متجر Your Brand. أستطيع أن أساعدك في اختيار السيارة المناسبة، مقارنة الخيارات، شرح خصائص السيارات، وتوجيهك إلى التمويل أو الخدمة أو حجز تجربة القيادة. أخبرني بميزانيتك، نوع السيارة المفضل، أو ما الذي تبحث عنه.',
@@ -409,6 +483,73 @@ const TRANSlations = {
     detailsLimited: 'محدودة',
     detailsReserved: 'محجوزة',
     inventoryCount: 'سيارة',
+    inventoryManageCatalog: 'إدارة الكتالوج',
+    productsEyebrow: 'مستلزمات المعرض',
+    productsTitle: 'منتجات لكل رحلة.',
+    productsIntro: 'اكتشف الإكسسوارات والمنتجات المختارة لسيارتك.',
+    productsEmpty: 'لا توجد منتجات متاحة حاليًا. تفقد الصفحة لاحقًا.',
+    productPrice: 'السعر',
+    productStock: 'متوفر',
+    productOutOfStock: 'غير متوفر',
+    pageTitleProducts: 'Your Brand | المنتجات',
+    adminEyebrow: 'إدارة محلية للكتالوج',
+    adminTitle: 'إدارة الكتالوج',
+    adminLocalNotice: 'وضع تجريبي: تُحفظ التغييرات في هذا المتصفح فقط، ولا تتم مشاركتها مع الزوار أو الأجهزة الأخرى.',
+    adminVehiclesTab: 'السيارات',
+    adminProductsTab: 'المنتجات',
+    adminAddVehicle: 'إضافة سيارة',
+    adminAddProduct: 'إضافة منتج',
+    adminEditVehicleTitle: 'تعديل السيارة',
+    adminEditProductTitle: 'تعديل المنتج',
+    adminEdit: 'تعديل',
+    adminDelete: 'حذف',
+    adminCancel: 'إلغاء',
+    adminSaveVehicle: 'حفظ السيارة',
+    adminSaveProduct: 'حفظ المنتج',
+    adminVehicleCount: 'سيارة في المخزون',
+    adminProductCount: 'منتج في الكتالوج',
+    adminVehicleEmpty: 'لا توجد سيارات في المخزون حتى الآن.',
+    adminProductEmpty: 'لا توجد منتجات في الكتالوج حتى الآن.',
+    adminVehicleSaved: 'تم حفظ السيارة.',
+    adminProductSaved: 'تم حفظ المنتج.',
+    adminVehicleDeleted: 'تم حذف السيارة من المخزون.',
+    adminProductDeleted: 'تم حذف المنتج من الكتالوج.',
+    adminRequiredFields: 'يرجى استكمال الحقول المطلوبة.',
+    seoHome: 'اكتشف السيارات الفاخرة والرياضية في مصر، وقارن بين الطرازات، وتعرّف على خيارات التمويل المخصصة من Your Brand.',
+    seoInventory: 'تصفح وقارن مخزون Your Brand من السيارات الفاخرة في مصر، واستخدم الفلاتر لاختيار سيارات الدفع الرباعي والكهربائية حسب السعر والمواصفات.',
+    seoDetails: 'اكتشف مواصفات السيارات الفاخرة ومميزاتها وأسعارها وخيارات تجربة القيادة لدى Your Brand في مصر.',
+    seoRegister: 'تواصل مع Your Brand للاستفسار عن مبيعات السيارات الفاخرة أو التمويل أو الخدمة في مصر.',
+    seoSales: 'اكتشف السيارات الفاخرة والرياضية مع دعم مبيعات مخصص من Your Brand في مصر.',
+    seoFinance: 'تعرّف على خطط التمويل وتخطيط الدفعات لشراء السيارات الفاخرة من Your Brand في مصر.',
+    seoService: 'احجز صيانة السيارات الفاخرة وخدمات ما بعد البيع لدى Your Brand في مصر.',
+    seoProducts: 'تصفح إكسسوارات ومنتجات السيارات لدى Your Brand.',
+    seoAdmin: 'نسخة تجريبية محلية لإدارة كتالوج Your Brand.',
+    adminInvalidPrice: 'أدخل سعرًا وكمية مخزون صالحين.',
+    adminStorageError: 'تعذر حفظ التغييرات في هذا المتصفح. تحقق من مساحة التخزين ثم حاول مجددًا.',
+    adminConfirmDelete: 'هل تريد حذف هذا العنصر؟',
+    adminBrand: 'العلامة التجارية',
+    adminModel: 'الطراز',
+    adminTrim: 'الفئة',
+    adminYear: 'السنة',
+    adminPrice: 'السعر (جنيه مصري)',
+    adminMileage: 'المسافة (كم)',
+    adminHorsepower: 'القوة (حصان)',
+    adminEngine: 'المحرك',
+    adminSeats: 'عدد المقاعد',
+    adminTransmission: 'ناقل الحركة',
+    adminFuel: 'الوقود',
+    adminBodyType: 'نوع الهيكل',
+    adminCondition: 'الحالة',
+    adminAvailability: 'التوفر',
+    adminImage: 'رابط الصورة أو اسم ملف محلي',
+    adminDescription: 'الوصف (بالإنجليزية)',
+    adminDescriptionAr: 'الوصف (بالعربية)',
+    adminProductName: 'اسم المنتج',
+    adminProductNameAr: 'اسم المنتج (بالعربية)',
+    adminProductDescription: 'الوصف',
+    adminProductDescriptionAr: 'الوصف (بالعربية)',
+    adminQuantity: 'الكمية',
+    pageTitleAdmin: 'Your Brand | إدارة الكتالوج',
     emptyState: 'لا توجد سيارات تطابق بحثك الحالي والفلاتر المختارة.',
     salesEyebrow: 'قسم المبيعات',
     salesTitle: 'قيادة بثقة.',
@@ -463,6 +604,7 @@ const TRANSlations = {
     interiorDescription2: 'أدوات تحكم بسيطة وتقنيات ذكية وتشطيبات دقيقة لكل رحلة.',
     interiorDescription3: 'تشطيبات مميزة ومقاعد أنيقة وأجواء فاخرة تخطف الأنظار.',
     detailsOverview: 'نظرة عامة',
+    detailsNoVehicles: 'لم تعد هذه السيارة متاحة في المخزون.',
     detailsTrim: 'الفئة',
     detailsTechnicalSpecs: 'المواصفات الفنية',
     detailsSimilarVehicles: 'سيارات مشابهة',
@@ -546,7 +688,7 @@ const TRANSlations = {
 const VEHICLE_CATEGORIES = ['SUV', 'Sedan', 'Coupe', 'Sports', 'Luxury', 'Electric'];
 const HERO_GALLERY = [
   {
-   image: 'lennyyx2z-esfhchB_I9Y-unsplash.jpg',
+   image: 'assets/images/lennyyx2z-esfhchB_I9Y-unsplash.jpg',
     title: 'Signature Design',
     text: 'Distinct looks and refined interiors.'
   },
@@ -570,7 +712,9 @@ const STORAGE_KEYS = {
   theme: 'your-brand-theme',
   lang: 'your-brand-language',
   favorites: 'your-brand-favorites',
-  compare: 'your-brand-compare'
+  compare: 'your-brand-compare',
+  vehicles: 'your-brand-vehicles',
+  products: 'your-brand-products'
 };
 
 const state = {
@@ -579,6 +723,68 @@ const state = {
   favorites: JSON.parse(localStorage.getItem(STORAGE_KEYS.favorites) || '[]'),
   compare: JSON.parse(localStorage.getItem(STORAGE_KEYS.compare) || '[]')
 };
+
+function readCatalogRecords(key, fallback, isValidRecord) {
+  const savedRecords = localStorage.getItem(key);
+  if (savedRecords === null) return fallback;
+
+  try {
+    const records = JSON.parse(savedRecords);
+    if (Array.isArray(records) && records.every(isValidRecord)) return records;
+    console.error(`Saved catalog data for "${key}" is invalid; using the bundled catalog instead.`);
+  } catch (error) {
+    console.error(`Could not read saved catalog data for "${key}"; using the bundled catalog instead.`, error);
+  }
+  return fallback;
+}
+
+const optimizedImageNames = new Set([
+  'ben-weber-cdxeytNTsZo-unsplash.jpg',
+  'lennyyx2z-esfhchB_I9Y-unsplash.jpg',
+  'peter-broomfield-m3m-lnR90uM-unsplash.jpg',
+  'pexels-a2pro-6509107.jpg',
+  'pexels-egeardaphotos-2148533277-37519992.jpg',
+  'pexels-jarne-aerts-3175149-6873675.jpg',
+  'pexels-lgorincioi-8265503.jpg',
+  'pexels-limonovdigital-10507791.jpg',
+  'pexels-mhd-wael-albonni-2153155641-32613935.jpg',
+  'pexels-mohit-hambiria-92377455-17339319.jpg',
+  'pexels-photobombcars-11202317.jpg',
+  'pexels-tima-miroshnichenko-6872585.jpg',
+  'ron-muller-4bB2LE9jkag-unsplash.jpg'
+]);
+
+function useOptimizedLocalImage(path) {
+  if (typeof path !== 'string') return path;
+  const fileName = path.split(/[\\/]/).pop().split('?')[0];
+  if (optimizedImageNames.has(fileName) && (path === fileName || path === `./${fileName}`)) {
+    return `assets/images/${fileName}`;
+  }
+  return path;
+}
+
+function normalizeCatalogImagePaths(records, isVehicle = false) {
+  return records.map((record) => ({
+    ...record,
+    image: useOptimizedLocalImage(record.image),
+    ...(isVehicle && Array.isArray(record.gallery)
+      ? { gallery: record.gallery.map(useOptimizedLocalImage) }
+      : {})
+  }));
+}
+
+window.VEHICLES = normalizeCatalogImagePaths(readCatalogRecords(
+  STORAGE_KEYS.vehicles,
+  window.VEHICLES || [],
+  (vehicle) => vehicle && typeof vehicle.id === 'string' && typeof vehicle.brand === 'string'
+    && typeof vehicle.model === 'string' && Number.isFinite(Number(vehicle.price))
+), true);
+window.PRODUCTS = normalizeCatalogImagePaths(readCatalogRecords(
+  STORAGE_KEYS.products,
+  [],
+  (product) => product && typeof product.id === 'string' && typeof product.name === 'string'
+    && Number.isFinite(Number(product.price)) && Number.isFinite(Number(product.quantity))
+));
 
 function formatPrice(value) {
   return new Intl.NumberFormat(state.lang === 'ar' ? 'ar-EG' : 'en-US', {
@@ -603,6 +809,16 @@ function updateCompareToggle() {
 
 function safeText(value) {
   return value || '';
+}
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[character]);
 }
 
 function localizedVehicleValue(value) {
@@ -632,6 +848,8 @@ function localizedSpecLabel(label) {
   if (state.lang !== 'ar') return label;
   const arabicLabels = {
     Power: 'القوة',
+    Engine: 'المحرك',
+    Seats: 'المقاعد',
     '0-100 km/h': 'التسارع من 0 إلى 100 كم/س',
     'Top speed': 'السرعة القصوى',
     Transmission: 'ناقل الحركة',
@@ -710,10 +928,23 @@ function setLanguage(language) {
   });
 
   const pageTitle = document.querySelector('title');
+  let localizedTitle = '';
   if (pageTitle) {
     const titleKey = `pageTitle${document.body.dataset.page[0].toUpperCase()}${document.body.dataset.page.slice(1)}`;
-    pageTitle.textContent = TRANSlations[selectedLanguage][titleKey] || TRANSlations[selectedLanguage].pageTitleHome;
+    localizedTitle = TRANSlations[selectedLanguage][titleKey] || TRANSlations[selectedLanguage].pageTitleHome;
+    pageTitle.textContent = localizedTitle;
   }
+  const descriptionKey = `seo${document.body.dataset.page[0].toUpperCase()}${document.body.dataset.page.slice(1)}`;
+  const description = TRANSlations[selectedLanguage][descriptionKey];
+  if (description) {
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+  }
+  if (localizedTitle) document.querySelector('meta[property="og:title"]')?.setAttribute('content', localizedTitle);
+  document.querySelector('meta[property="og:locale"]')?.setAttribute(
+    'content',
+    selectedLanguage === 'ar' ? 'ar_EG' : 'en_US'
+  );
 
   updateLanguageButtons();
   updateCompareToggle();
@@ -728,6 +959,12 @@ function setLanguage(language) {
   }
   if (document.body.dataset.page === 'details') {
     renderDetailsPage();
+  }
+  if (document.body.dataset.page === 'products') {
+    renderProductsPage();
+  }
+  if (document.body.dataset.page === 'admin') {
+    renderAdminCatalog();
   }
 }
 
@@ -842,14 +1079,14 @@ function updateComparePanel() {
   };
   const rows = criteria.map((key) => {
     const values = vehicles.map((vehicle) => {
-      const value = key === 'price' ? formatPrice(vehicle.price) : key === 'mileage' ? `${vehicle.mileage.toLocaleString()} km` : safeText(vehicle[key]);
+      const value = key === 'price' ? formatPrice(vehicle.price) : key === 'mileage' ? `${Number(vehicle.mileage || 0).toLocaleString()} km` : safeText(vehicle[key]);
       return localizedVehicleValue(value);
     });
     const unique = [...new Set(values.map((val) => val.toString()))];
     return `
       <tr class="compare-row ${unique.length > 1 ? 'is-different' : ''}">
         <th>${criterionLabels[key]}</th>
-        ${vehicles.map((vehicle) => `        <td>${key === 'price' ? formatPrice(vehicle.price) : key === 'mileage' ? `${vehicle.mileage.toLocaleString()} km` : localizedVehicleValue(vehicle[key])}</td>`).join('')}
+        ${vehicles.map((vehicle) => `        <td>${escapeHtml(key === 'price' ? formatPrice(vehicle.price) : key === 'mileage' ? `${Number(vehicle.mileage || 0).toLocaleString()} km` : localizedVehicleValue(vehicle[key]))}</td>`).join('')}
       </tr>
     `;
   }).join('');
@@ -861,8 +1098,8 @@ function updateComparePanel() {
         ${vehicles.map((vehicle) => `
           <th>
             <div class="compare-header">
-              <strong>${vehicle.brand} ${vehicle.model}</strong>
-              <button type="button" class="comparison-remove" aria-label="${TRANSlations[state.lang].removeVehicle} ${vehicle.brand} ${vehicle.model}" data-remove-compare="${vehicle.id}">${TRANSlations[state.lang].removeVehicle}</button>
+              <strong>${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)}</strong>
+              <button type="button" class="comparison-remove" aria-label="${TRANSlations[state.lang].removeVehicle} ${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)}" data-remove-compare="${escapeHtml(vehicle.id)}">${TRANSlations[state.lang].removeVehicle}</button>
             </div>
           </th>
         `).join('')}
@@ -905,30 +1142,32 @@ function renderHomePriceLabels() {
 }
 
 function vehicleCard(vehicle) {
+  const vehicleName = `${vehicle.brand} ${vehicle.model} ${vehicle.trim || ''}`.trim();
+  const statusClass = String(vehicle.availability || '').toLowerCase().replace(/[^a-z0-9_-]/g, '');
   return `
     <article class="vehicle-card">
       <div class="vehicle-card__media">
-        <img src="${vehicle.image}" alt="${vehicle.brand} ${vehicle.model} ${vehicle.trim}" loading="lazy" />
-        <div class="vehicle-card__status ${vehicle.availability.toLowerCase()}">${localizedVehicleValue(vehicle.availability)}</div>
+        <img src="${escapeHtml(vehicle.image)}" alt="${escapeHtml(vehicleName)}" loading="lazy" />
+        <div class="vehicle-card__status ${statusClass}">${escapeHtml(localizedVehicleValue(vehicle.availability))}</div>
         <div class="vehicle-card__actions">
-          <button class="card-action" data-favorite-id="${vehicle.id}" aria-label="${state.lang === 'ar' ? 'إضافة للمفضلة' : 'Add to favorites'}">
+          <button class="card-action" data-favorite-id="${escapeHtml(vehicle.id)}" aria-label="${state.lang === 'ar' ? 'إضافة للمفضلة' : 'Add to favorites'}">
             <i class="fas fa-heart"></i>
           </button>
-          <button class="card-action" data-compare-id="${vehicle.id}" aria-label="${state.lang === 'ar' ? 'مقارنة السيارة' : 'Compare vehicle'}">
+          <button class="card-action" data-compare-id="${escapeHtml(vehicle.id)}" aria-label="${state.lang === 'ar' ? 'مقارنة السيارة' : 'Compare vehicle'}">
             <i class="fas fa-balance-scale"></i>
           </button>
         </div>
       </div>
       <div class="vehicle-card__body">
         <div class="vehicle-card__meta">
-          <span>${vehicle.brand}</span>
-          <span>${vehicle.year}</span>
+          <span>${escapeHtml(vehicle.brand)}</span>
+          <span>${escapeHtml(String(vehicle.year))}</span>
         </div>
-        <h3>${vehicle.model} <span>${vehicle.trim}</span></h3>
+        <h3>${escapeHtml(vehicle.model)} <span>${escapeHtml(vehicle.trim || '')}</span></h3>
         <div class="vehicle-card__specs">
-          <span>${vehicle.mileage.toLocaleString()} km</span>
-          <span>${localizedVehicleValue(vehicle.transmission)}</span>
-          <span>${localizedVehicleValue(vehicle.fuel)}</span>
+          <span>${Number(vehicle.mileage || 0).toLocaleString()} km</span>
+          <span>${escapeHtml(localizedVehicleValue(vehicle.transmission))}</span>
+          <span>${escapeHtml(localizedVehicleValue(vehicle.fuel))}</span>
         </div>
         <div class="vehicle-card__footer">
           <div class="price-group">
@@ -936,7 +1175,7 @@ function vehicleCard(vehicle) {
             <strong>${formatPrice(vehicle.price)}</strong>
           </div>
           <div class="card-links">
-            <a href="details.html?id=${vehicle.id}" class="btn btn-ghost">${state.lang === 'ar' ? 'تفاصيل' : 'Details'}</a>
+            <a href="details.html?id=${encodeURIComponent(vehicle.id)}" class="btn btn-ghost">${state.lang === 'ar' ? 'تفاصيل' : 'Details'}</a>
           </div>
         </div>
       </div>
@@ -1007,6 +1246,19 @@ function renderInventory() {
   const count = document.getElementById('inventory-count');
   if (!grid) return;
 
+  const brandFilter = document.getElementById('brand-filter');
+  if (brandFilter) {
+    const knownBrands = new Set([...brandFilter.options].map((option) => option.value));
+    window.VEHICLES.forEach((vehicle) => {
+      if (!knownBrands.has(vehicle.brand)) {
+        const option = document.createElement('option');
+        option.value = vehicle.brand;
+        option.textContent = vehicle.brand;
+        brandFilter.append(option);
+      }
+    });
+  }
+
   const vehicles = getFilteredVehicles();
   if (count) {
     count.textContent = String(vehicles.length);
@@ -1025,23 +1277,23 @@ function renderInventory() {
   grid.innerHTML = vehicles.map((vehicle) => `
     <article class="vehicle-card inventory-card">
       <div class="vehicle-card__media">
-        <img src="${vehicle.image}" alt="${vehicle.brand} ${vehicle.model}" loading="lazy" />
-        <div class="vehicle-card__status ${vehicle.availability.toLowerCase()}">${localizedVehicleValue(vehicle.availability)}</div>
+        <img src="${escapeHtml(vehicle.image)}" alt="${escapeHtml(`${vehicle.brand} ${vehicle.model}`)}" loading="lazy" />
+        <div class="vehicle-card__status ${String(vehicle.availability || '').toLowerCase().replace(/[^a-z0-9_-]/g, '')}">${escapeHtml(localizedVehicleValue(vehicle.availability))}</div>
         <div class="vehicle-card__actions">
-          <button class="card-action" data-favorite-id="${vehicle.id}" aria-label="${state.lang === 'ar' ? 'إضافة للمفضلة' : 'Add to favorites'}"><i class="fas fa-heart"></i></button>
-          <button class="card-action" data-compare-id="${vehicle.id}" aria-label="${state.lang === 'ar' ? 'مقارنة السيارة' : 'Compare vehicle'}"><i class="fas fa-balance-scale"></i></button>
+          <button class="card-action" data-favorite-id="${escapeHtml(vehicle.id)}" aria-label="${state.lang === 'ar' ? 'إضافة للمفضلة' : 'Add to favorites'}"><i class="fas fa-heart"></i></button>
+          <button class="card-action" data-compare-id="${escapeHtml(vehicle.id)}" aria-label="${state.lang === 'ar' ? 'مقارنة السيارة' : 'Compare vehicle'}"><i class="fas fa-balance-scale"></i></button>
         </div>
       </div>
       <div class="vehicle-card__body">
         <div class="vehicle-card__meta">
-          <span>${vehicle.brand}</span>
-          <span>${vehicle.year}</span>
+          <span>${escapeHtml(vehicle.brand)}</span>
+          <span>${escapeHtml(String(vehicle.year))}</span>
         </div>
-        <h3>${vehicle.model} <span>${vehicle.trim}</span></h3>
+        <h3>${escapeHtml(vehicle.model)} <span>${escapeHtml(vehicle.trim || '')}</span></h3>
         <div class="vehicle-card__specs">
-          <span>${vehicle.mileage.toLocaleString()} km</span>
-          <span>${localizedVehicleValue(vehicle.transmission)}</span>
-          <span>${localizedVehicleValue(vehicle.fuel)}</span>
+          <span>${Number(vehicle.mileage || 0).toLocaleString()} km</span>
+          <span>${escapeHtml(localizedVehicleValue(vehicle.transmission))}</span>
+          <span>${escapeHtml(localizedVehicleValue(vehicle.fuel))}</span>
         </div>
         <div class="vehicle-card__footer">
           <div class="price-group">
@@ -1049,7 +1301,7 @@ function renderInventory() {
             <strong>${formatPrice(vehicle.price)}</strong>
           </div>
           <div class="card-links">
-            <a href="details.html?id=${vehicle.id}" class="btn btn-ghost">${state.lang === 'ar' ? 'تفاصيل' : 'Details'}</a>
+            <a href="details.html?id=${encodeURIComponent(vehicle.id)}" class="btn btn-ghost">${state.lang === 'ar' ? 'تفاصيل' : 'Details'}</a>
           </div>
         </div>
       </div>
@@ -1076,13 +1328,13 @@ function renderFavoritesView() {
 
   favoritesGrid.innerHTML = favorites.map((vehicle) => `
     <article class="favorite-item">
-      <img src="${vehicle.image}" alt="${vehicle.brand} ${vehicle.model}" />
+      <img src="${escapeHtml(vehicle.image)}" alt="${escapeHtml(`${vehicle.brand} ${vehicle.model}`)}" />
       <div>
-        <h4>${vehicle.brand} ${vehicle.model}</h4>
+        <h4>${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)}</h4>
         <p>${formatPrice(vehicle.price)}</p>
         <div class="favorite-actions">
-          <a href="details.html?id=${vehicle.id}" class="link-button">${state.lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</a>
-          <button class="text-button" data-toggle-favorite="${vehicle.id}">${state.lang === 'ar' ? 'إزالة' : 'Remove'}</button>
+          <a href="details.html?id=${encodeURIComponent(vehicle.id)}" class="link-button">${state.lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</a>
+          <button class="text-button" data-toggle-favorite="${escapeHtml(vehicle.id)}">${state.lang === 'ar' ? 'إزالة' : 'Remove'}</button>
         </div>
       </div>
     </article>
@@ -1206,7 +1458,21 @@ function renderDetailsPage() {
   const root = document.getElementById('vehicle-detail-root');
   if (!root) return;
   const params = new URLSearchParams(window.location.search);
-  const vehicle = getVehicleById(params.get('id')) || window.VEHICLES[0];
+  const requestedId = params.get('id');
+  const vehicle = requestedId ? getVehicleById(requestedId) : window.VEHICLES[0] || null;
+  const emptyState = document.getElementById('vehicle-detail-empty');
+  if (!vehicle) {
+    root.hidden = true;
+    if (emptyState) emptyState.hidden = false;
+    const title = TRANSlations[state.lang].pageTitleDetails;
+    document.title = title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', TRANSlations[state.lang].seoDetails);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', TRANSlations[state.lang].seoDetails);
+    return;
+  }
+  root.hidden = false;
+  if (emptyState) emptyState.hidden = true;
 
   const gallery = document.getElementById('detail-gallery');
   const mainImage = document.getElementById('gallery-main-image');
@@ -1222,6 +1488,49 @@ function renderDetailsPage() {
   if (!title || !price || !description || !features || !specs || !similar) return;
 
   title.textContent = `${vehicle.brand} ${vehicle.model}`;
+  const pageTitle = `${vehicle.brand} ${vehicle.model} ${vehicle.year} | Your Brand`;
+  const pageDescription = `${vehicle.brand} ${vehicle.model} ${vehicle.trim || ''}: ${state.lang === 'ar' ? vehicle.descriptionAr || vehicle.description : vehicle.description}`
+    .replace(/\s+/g, ' ')
+    .slice(0, 160);
+  document.title = pageTitle;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', pageDescription);
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', pageTitle);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', pageDescription);
+  let structuredData = document.getElementById('vehicle-structured-data');
+  if (!structuredData) {
+    structuredData = document.createElement('script');
+    structuredData.id = 'vehicle-structured-data';
+    structuredData.type = 'application/ld+json';
+    document.head.append(structuredData);
+  }
+  if (structuredData) {
+    const availability = vehicle.availability === 'Reserved' ? 'OutOfStock' : 'InStock';
+    const itemCondition = vehicle.condition === 'New' ? 'NewCondition' : 'UsedCondition';
+    structuredData.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Car',
+      name: `${vehicle.brand} ${vehicle.model} ${vehicle.trim || ''}`.trim(),
+      brand: { '@type': 'Brand', name: vehicle.brand },
+      model: vehicle.model,
+      vehicleModelDate: String(vehicle.year),
+      image: (vehicle.gallery?.length ? vehicle.gallery : [vehicle.image])
+        .map((image) => new URL(image, window.location.href).href),
+      description: state.lang === 'ar' ? vehicle.descriptionAr || vehicle.description : vehicle.description,
+      vehicleTransmission: vehicle.transmission,
+      mileageFromOdometer: {
+        '@type': 'QuantitativeValue',
+        value: Number(vehicle.mileage) || 0,
+        unitCode: 'KMT'
+      },
+      offers: {
+        '@type': 'Offer',
+        price: Number(vehicle.price),
+        priceCurrency: 'EGP',
+        availability: `https://schema.org/${availability}`,
+        itemCondition: `https://schema.org/${itemCondition}`
+      }
+    });
+  }
   price.textContent = formatPrice(vehicle.price);
   const financingPrice = document.getElementById('vehicle-price');
   const downPayment = document.getElementById('down-payment');
@@ -1235,26 +1544,28 @@ function renderDetailsPage() {
   mainImage.src = vehicle.image;
   mainImage.alt = `${vehicle.brand} ${vehicle.model}`;
 
-  thumbs.innerHTML = vehicle.gallery.map((image, index) => `
+  const galleryImages = vehicle.gallery?.length ? vehicle.gallery : [vehicle.image];
+  thumbs.innerHTML = galleryImages.map((image, index) => `
     <button class="thumb-button ${index === 0 ? 'is-active' : ''}" data-gallery-index="${index}" aria-label="View image ${index + 1}">
-      <img src="${image}" alt="${vehicle.brand} ${vehicle.model} ${index + 1}" />
+      <img src="${escapeHtml(image)}" alt="${escapeHtml(`${vehicle.brand} ${vehicle.model}`)} ${index + 1}" />
     </button>
   `).join('');
 
-  const localizedFeatures = state.lang === 'ar' ? vehicle.featuresAr || vehicle.features : vehicle.features;
+  const featuresList = vehicle.features || [];
+  const localizedFeatures = state.lang === 'ar' ? vehicle.featuresAr || featuresList : featuresList;
   features.innerHTML = localizedFeatures.map((feature) => `<li>${feature}</li>`).join('');
-  specs.innerHTML = Object.entries(vehicle.specs).map(([key, value]) => `
+  specs.innerHTML = Object.entries(vehicle.specs || {}).map(([key, value]) => `
     <div class="spec-item"><span>${localizedSpecLabel(key)}</span><strong>${localizedSpecValue(value)}</strong></div>
   `).join('');
 
   const related = window.VehicleData.getSimilar(vehicle, 3);
   similar.innerHTML = related.map((item) => `
     <article class="similar-card">
-      <img src="${item.image}" alt="${item.brand} ${item.model}" />
+      <img src="${escapeHtml(item.image)}" alt="${escapeHtml(`${item.brand} ${item.model}`)}" />
       <div class="similar-card__content">
-        <h4>${item.brand} ${item.model}</h4>
+        <h4>${escapeHtml(item.brand)} ${escapeHtml(item.model)}</h4>
         <p>${formatPrice(item.price)}</p>
-        <a href="details.html?id=${item.id}" class="btn btn-ghost">${state.lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</a>
+        <a href="details.html?id=${encodeURIComponent(item.id)}" class="btn btn-ghost">${state.lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</a>
       </div>
     </article>
   `).join('');
@@ -1264,14 +1575,14 @@ function renderDetailsPage() {
     const isActive = isFavorite(vehicle.id);
     favoriteButton.classList.toggle('is-active', isActive);
     favoriteButton.dataset.favoriteId = vehicle.id;
-    favoriteButton.addEventListener('click', () => toggleFavorite(vehicle.id));
+    favoriteButton.onclick = () => toggleFavorite(favoriteButton.dataset.favoriteId);
   }
 
   const compareButton = document.getElementById('compare-button');
   if (compareButton) {
     compareButton.dataset.compareId = vehicle.id;
     compareButton.classList.toggle('is-active', state.compare.includes(vehicle.id));
-    compareButton.addEventListener('click', () => addCompareVehicle(vehicle.id));
+    compareButton.onclick = () => addCompareVehicle(compareButton.dataset.compareId);
   }
 
   const whatsappButton = document.getElementById('details-whatsapp');
@@ -1279,16 +1590,17 @@ function renderDetailsPage() {
     whatsappButton.href = `https://wa.me/?text=${encodeURIComponent(`Hello Your Brand, I am interested in the ${vehicle.brand} ${vehicle.model} ${vehicle.trim} for ${formatPrice(vehicle.price)}.`)}`;
   }
 
-  document.getElementById('details-test-drive')?.addEventListener('click', () => {
+  const testDriveButton = document.getElementById('details-test-drive');
+  if (testDriveButton) testDriveButton.onclick = () => {
     const bookingForm = document.getElementById('booking-form');
     if (bookingForm) bookingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+  };
 
   const thumbnailButtons = document.querySelectorAll('.thumb-button');
   let currentIndex = 0;
   function updateGallery(index) {
-    currentIndex = (index + vehicle.gallery.length) % vehicle.gallery.length;
-    mainImage.src = vehicle.gallery[currentIndex];
+    currentIndex = (index + galleryImages.length) % galleryImages.length;
+    mainImage.src = galleryImages[currentIndex];
     thumbnailButtons.forEach((button, btnIndex) => button.classList.toggle('is-active', btnIndex === currentIndex));
   }
 
@@ -1296,18 +1608,21 @@ function renderDetailsPage() {
     button.addEventListener('click', () => updateGallery(Number(button.dataset.galleryIndex)));
   });
 
-  document.getElementById('gallery-prev')?.addEventListener('click', () => updateGallery(currentIndex - 1));
-  document.getElementById('gallery-next')?.addEventListener('click', () => updateGallery(currentIndex + 1));
+  const previousImage = document.getElementById('gallery-prev');
+  const nextImage = document.getElementById('gallery-next');
+  if (previousImage) previousImage.onclick = () => updateGallery(currentIndex - 1);
+  if (nextImage) nextImage.onclick = () => updateGallery(currentIndex + 1);
 
   const galleryMain = document.getElementById('gallery-main');
   const lightbox = document.getElementById('lightbox-overlay');
   if (galleryMain && lightbox) {
-    galleryMain.addEventListener('click', () => {
+    galleryMain.onclick = () => {
       const lightboxImage = lightbox.querySelector('img');
-      if (lightboxImage) lightboxImage.src = vehicle.gallery[currentIndex];
+      if (lightboxImage) lightboxImage.src = galleryImages[currentIndex];
       lightbox.classList.add('is-open');
-    });
-    document.getElementById('lightbox-close')?.addEventListener('click', () => lightbox.classList.remove('is-open'));
+    };
+    const closeLightbox = document.getElementById('lightbox-close');
+    if (closeLightbox) closeLightbox.onclick = () => lightbox.classList.remove('is-open');
   }
 
   document.getElementById('summary-year').textContent = vehicle.year;
@@ -1403,7 +1718,10 @@ function bindGlobalEvents() {
       if (!assistantWidget) return;
       assistantWidget.classList.add('is-open');
       assistantWidget.classList.remove('is-minimized');
+      assistantWidget.setAttribute('aria-hidden', 'false');
+      assistantToggle.setAttribute('aria-expanded', 'true');
       assistantToggle.style.display = 'none';
+      document.getElementById('assistant-input')?.focus();
     });
   }
 
@@ -1412,34 +1730,60 @@ function bindGlobalEvents() {
       if (!assistantWidget) return;
       assistantWidget.classList.remove('is-open');
       assistantWidget.classList.remove('is-minimized');
+      assistantWidget.setAttribute('aria-hidden', 'true');
       if (assistantToggle) assistantToggle.style.display = 'block';
-      if (assistantWidget) assistantWidget.setAttribute('aria-hidden', 'true');
+      assistantToggle?.setAttribute('aria-expanded', 'false');
     });
   }
 
   if (assistantMinimize) {
     assistantMinimize.addEventListener('click', () => {
       if (!assistantWidget) return;
-      assistantWidget.classList.add('is-minimized');
-      if (assistantToggle) assistantToggle.style.display = 'block';
-      assistantWidget.setAttribute('aria-hidden', 'true');
+      const isMinimized = assistantWidget.classList.toggle('is-minimized');
+      assistantWidget.classList.add('is-open');
+      assistantWidget.setAttribute('aria-hidden', 'false');
+      assistantToggle?.setAttribute('aria-expanded', 'true');
+      assistantMinimize.setAttribute('aria-label', isMinimized
+        ? (state.lang === 'ar' ? 'توسيع المساعد' : 'Expand assistant')
+        : (state.lang === 'ar' ? 'تصغير المساعد' : 'Minimize assistant'));
     });
   }
 
   const assistantForm = document.getElementById('assistant-form');
   if (assistantForm) {
+    let responsePending = false;
     assistantForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      if (responsePending) return;
       const input = document.getElementById('assistant-input');
       const output = document.getElementById('assistant-output');
-      if (!input || !output) return;
+      if (!input || !output) {
+        console.error('Assistant form is missing its input or response container.');
+        return;
+      }
 
       const prompt = input.value.trim();
       if (!prompt) return;
 
-      const response = buildAssistantResponse(prompt);
-      output.innerHTML = response;
-      assistantForm.reset();
+      responsePending = true;
+      input.disabled = true;
+      output.setAttribute('aria-busy', 'true');
+      assistantForm.querySelector('button[type="submit"]')?.setAttribute('disabled', '');
+      document.querySelectorAll('.assistant-chip').forEach((chip) => chip.setAttribute('disabled', ''));
+      output.innerHTML = `<div class="assistant-thinking" role="status"><span class="assistant-thinking__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>${TRANSlations[state.lang].assistantThinking}</span></div>`;
+      const assistantBody = output.closest('.assistant-body');
+      if (assistantBody) assistantBody.scrollTop = assistantBody.scrollHeight;
+      window.setTimeout(() => {
+        output.innerHTML = buildAssistantResponse(prompt);
+        output.removeAttribute('aria-busy');
+        input.disabled = false;
+        assistantForm.querySelector('button[type="submit"]')?.removeAttribute('disabled');
+        document.querySelectorAll('.assistant-chip').forEach((chip) => chip.removeAttribute('disabled'));
+        assistantForm.reset();
+        responsePending = false;
+        if (assistantBody) assistantBody.scrollTop = assistantBody.scrollHeight;
+        input.focus();
+      }, 2000);
     });
   }
 
@@ -1475,18 +1819,19 @@ function buildAssistantResponse(prompt) {
     return `<div class="assistant-message">${emptyText}</div>`;
   }
 
-  const lowerQuery = query.toLowerCase();
-  const normalizedQuery = lowerQuery.replace(/[^a-z0-9\s]/g, ' ');
+  const toLatinDigits = (value) => value.replace(/[٠-٩]/g, (digit) => String('٠١٢٣٤٥٦٧٨٩'.indexOf(digit)));
+  const lowerQuery = toLatinDigits(query.toLowerCase()).replace(/[٬،]/g, ',');
+  const normalizedQuery = lowerQuery.replace(/[^\p{L}0-9\s]/gu, ' ');
   const vehicles = window.VEHICLES || [];
   const isArabic = state.lang === 'ar';
 
   const greetingPattern = /^(hi|hello|hey|hey there|salam|as-salamu alaykum|peace be upon you|marhaba|good morning|good afternoon|good evening|bonjour|hola|مرحبا|السلام عليكم|السلام|اهلا|أهلا|حياك|سلم|hello there|صباح الخير|مساء الخير|good day|salutations|greetings|assalamu alaikum|peace|salaam)/i;
-  const generalSitePattern = /(website|site|what is on this site|what do you offer|departments|sales|finance|service|registration|register|whatsapp|showroom|contact|about|how do i|can you help|guide me)/i;
-  const generalInfoPattern = /(what can you do|who are you|what is your role|assistant|help me|guide me|you can help|what do you do)/i;
+  const generalSitePattern = /(website|site|what is on this site|what do you offer|departments|sales|finance|service|registration|register|whatsapp|showroom|contact|about|how do i|can you help|guide me|الموقع|أقسام|اقسام|المعرض|التواصل|الخدمة|المبيعات|التمويل|واتساب)/i;
+  const generalInfoPattern = /(what can you do|who are you|what is your role|assistant|help me|guide me|you can help|what do you do|ماذا تفعل|من أنت|كيف تساعدني|مساعد)/i;
   const isGreetingOnly = greetingPattern.test(query) || /^(hello|hi|hey|السلام عليكم|مرحبا|اهلا|أهلا|salam|peace be upon you|assalamu alaikum|salam)$/i.test(query.trim());
   const isGeneralHelpQuery = generalSitePattern.test(query) || generalInfoPattern.test(query);
 
-  if (isGreetingOnly || /^[\s\W_]*$/.test(query)) {
+  if (isGreetingOnly || !/[\p{L}\p{N}]/u.test(query)) {
     const welcome = isArabic
       ? 'مرحباً! أنا مساعد متجر Your Brand. أستطيع أن أساعدك في اختيار السيارة المناسبة، مقارنة الخيارات، شرح خصائص السيارات، وتوجيهك إلى التمويل أو الخدمة أو حجز تجربة القيادة. أخبرني بميزانيتك، نوع السيارة المفضل، أو اسألني عن أي سيارة من المخزون الحالي.'
       : 'Hello! I am the Your Brand dealership assistant. I can help you choose the right vehicle, compare available models, explain specs and features, and guide you toward financing, servicing, or a test drive. Tell me your budget, preferred vehicle type, or ask about any model in our current inventory.';
@@ -1507,12 +1852,12 @@ function buildAssistantResponse(prompt) {
     return `<div class="assistant-message"><strong>${isArabic ? 'عن الموقع' : 'About the site'}:</strong><br>${siteIntro}</div>`;
   }
 
-  const budgetMatch = lowerQuery.match(/(?:under|below|less than|up to|max(?:imum)?|within|around|budget|about)\s*(?:\$|egp\s*)?(\d+(?:,\d{3})*(?:\.\d+)?)\s*(million|millions|m|k)?/i)
-    || lowerQuery.match(/(?:\$|egp\s*)?(\d+(?:,\d{3})*(?:\.\d+)?)\s*(million|millions|m|k)?\s*(?:budget|max(?:imum)?|limit|cap)?/i)
+  const budgetMatch = lowerQuery.match(/(?:under|below|less than|up to|max(?:imum)?|within|around|budget|about|تحت|أقل من|اقل من|حتى|بحد أقصى|ميزانية)\s*(?:\$|egp\s*)?(\d+(?:,\d{3})*(?:\.\d+)?)\s*(million|millions|m|k|مليون|ملايين|ألف|الف)?/i)
+    || lowerQuery.match(/(?:\$|egp\s*)?(\d+(?:,\d{3})*(?:\.\d+)?)\s*(million|millions|m|k|مليون|ملايين|ألف|الف)?\s*(?:budget|max(?:imum)?|limit|cap|جنيه|جنيه مصري)?/i)
     || lowerQuery.match(/(\d+(?:,\d{3})*(?:\.\d+)?)\s*(?:دولار|usd|دولارات|جنيه|egp)/i)
     || lowerQuery.match(/(\d+(?:\s*[,\.]?\s*\d+)*)\s*(الف|ألف|k|k\$)/i);
   const budgetValue = budgetMatch ? Number(String(budgetMatch[1]).replace(/,/g, '').replace(/\s+/g, '')) : NaN;
-  const budgetScale = /^(million|millions|m)$/i.test(budgetMatch?.[2] || '')
+  const budgetScale = /^(million|millions|m|مليون|ملايين)$/i.test(budgetMatch?.[2] || '')
     ? 1000000
     : /^(k|k\$|الف|ألف)$/i.test(budgetMatch?.[2] || '') ? 1000 : 1;
   const budget = Number.isFinite(budgetValue) ? budgetValue * budgetScale : null;
@@ -1528,34 +1873,43 @@ function buildAssistantResponse(prompt) {
       || vehicle.model.toLowerCase().includes(words);
   }) || null;
 
-  const requestedType = VEHICLE_CATEGORIES.find((category) => normalizedQuery.includes(category.toLowerCase())) || null;
-  const requestedFuel = ['petrol', 'diesel', 'electric', 'hybrid'].find((value) => normalizedQuery.includes(value)) || null;
-  const wantsBooking = /(book|booking|test drive|test-drive|schedule|appointment|reserve|visit showroom)/i.test(query);
-  const wantsComparison = /(compare|difference|vs|versus|between|which is better|which one is better)/i.test(query);
-  const wantsSpecs = /(specs?|specification|features?|horsepower|range|engine|transmission|price|cost|how much|what is|details)/i.test(query);
-  const wantsCheapest = /(cheapest|lowest price|best value|most affordable|affordable|least expensive)/i.test(query);
-  const wantsElectric = /electric|ev|battery/i.test(query);
-  const wantsSUV = /suv|sport utility/i.test(query);
-  const wantsFamily = /family|family car|kids|7 seats|5 seats/i.test(query);
-  const wantsPerformance = /performance|power|fast|speed|sport|horsepower|track/i.test(query);
-  const wantsBudgetList = /(under|below|less than|up to|max|within|budget|price|cost)/i.test(query);
+  const requestedType = VEHICLE_CATEGORIES.find((category) => normalizedQuery.includes(category.toLowerCase()))
+    || (/دفع رباعي|الدفع الرباعي|اس يو في/i.test(query) ? 'SUV' : null)
+    || (/سيدان/i.test(query) ? 'Sedan' : null)
+    || (/كوبيه/i.test(query) ? 'Coupe' : null)
+    || (/رياضي|رياضية/i.test(query) ? 'Sports' : null)
+    || (/فاخرة|فاخر/i.test(query) ? 'Luxury' : null)
+    || (/كهربائي|كهربائية/i.test(query) ? 'Electric' : null);
+  const requestedFuel = ['petrol', 'diesel', 'electric', 'hybrid'].find((value) => normalizedQuery.includes(value))
+    || (/بنزين/i.test(query) ? 'petrol' : null)
+    || (/كهربائي|كهربائية/i.test(query) ? 'electric' : null)
+    || (/هجين/i.test(query) ? 'hybrid' : null);
+  const wantsBooking = /(book|booking|test drive|test-drive|schedule|appointment|reserve|visit showroom|حجز|احجز|تجربة قيادة|موعد)/i.test(query);
+  const wantsComparison = /(compare|difference|vs|versus|between|which is better|which one is better|قارن|مقارنة|الفرق بين)/i.test(query);
+  const wantsSpecs = /(specs?|specification|features?|horsepower|range|engine|transmission|price|cost|how much|what is|details|السعر|سعر|مواصفات|مميزات|مميزات|قوة المحرك|كم سعر)/i.test(query);
+  const wantsCheapest = /(cheapest|lowest price|best value|most affordable|affordable|least expensive|أرخص|الارخص|الأرخص|أقل سعر|اقل سعر)/i.test(query);
+  const wantsElectric = /electric|ev|battery|كهربائي|كهربائية/i.test(query);
+  const wantsSUV = /suv|sport utility|دفع رباعي|الدفع الرباعي|اس يو في/i.test(query);
+  const wantsFamily = /family|family car|kids|7 seats|5 seats|عائلة|عائلي|أطفال|اطفال|مقاعد/i.test(query);
+  const wantsPerformance = /performance|power|fast|speed|sport|horsepower|track|أداء|قوة|سريع|سرعة|رياضي/i.test(query);
+  const wantsBudgetList = /(under|below|less than|up to|max|within|budget|price|cost|تحت|أقل من|اقل من|ميزانية|سعر|أسعار|اسعار)/i.test(query);
 
   if (requestedVehicle && wantsSpecs) {
     const detailParts = Object.entries(requestedVehicle.specs)
-      .map(([key, value]) => `${key}: ${value}`)
+      .map(([key, value]) => `${escapeHtml(key)}: ${escapeHtml(value)}`)
       .join('<br>');
 
     return `
       <div class="assistant-message">
         <div class="assistant-card">
-          <img src="${requestedVehicle.image}" alt="${requestedVehicle.brand} ${requestedVehicle.model}" />
+          <img src="${escapeHtml(requestedVehicle.image)}" alt="${escapeHtml(`${requestedVehicle.brand} ${requestedVehicle.model}`)}" />
           <div>
-            <strong>${requestedVehicle.brand} ${requestedVehicle.model} ${requestedVehicle.trim}</strong>
+            <strong>${escapeHtml(requestedVehicle.brand)} ${escapeHtml(requestedVehicle.model)} ${escapeHtml(requestedVehicle.trim || '')}</strong>
             <p>${formatPrice(requestedVehicle.price)}</p>
           </div>
         </div>
         <p>${detailParts}</p>
-        <small>${requestedVehicle.description}</small>
+        <small>${escapeHtml(requestedVehicle.description)}</small>
       </div>
     `;
   }
@@ -1564,11 +1918,11 @@ function buildAssistantResponse(prompt) {
     return `
       <div class="assistant-message">
         <div class="assistant-card">
-          <img src="${requestedVehicle.image}" alt="${requestedVehicle.brand} ${requestedVehicle.model}" />
+          <img src="${escapeHtml(requestedVehicle.image)}" alt="${escapeHtml(`${requestedVehicle.brand} ${requestedVehicle.model}`)}" />
           <div>
-            <strong>${requestedVehicle.brand} ${requestedVehicle.model} ${requestedVehicle.trim}</strong>
+            <strong>${escapeHtml(requestedVehicle.brand)} ${escapeHtml(requestedVehicle.model)} ${escapeHtml(requestedVehicle.trim || '')}</strong>
             <p>${formatPrice(requestedVehicle.price)}</p>
-            <small>${requestedVehicle.availability}</small>
+            <small>${escapeHtml(requestedVehicle.availability)}</small>
           </div>
         </div>
       </div>
@@ -1584,7 +1938,7 @@ function buildAssistantResponse(prompt) {
 
     if (candidateModels.length >= 2) {
       const comparison = candidateModels.slice(0, 2)
-        .map((vehicle) => `${vehicle.brand} ${vehicle.model} — ${formatPrice(vehicle.price)} — ${vehicle.specs['Power']} — ${vehicle.fuel}`)
+        .map((vehicle) => `${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)} — ${formatPrice(vehicle.price)} — ${escapeHtml(vehicle.specs['Power'])} — ${escapeHtml(vehicle.fuel)}`)
         .join('<br>');
       return `<div class="assistant-message"><strong>${isArabic ? 'المقارنة' : 'Compare'}:</strong><br>${comparison}</div>`;
     }
@@ -1598,7 +1952,7 @@ function buildAssistantResponse(prompt) {
   }
 
   let suggested = vehicles.filter((vehicle) => {
-    if (budget && budget < vehicle.price) return false;
+    if (budget !== null && budget < vehicle.price) return false;
     if (requestedType && vehicle.bodyType.toLowerCase() !== requestedType.toLowerCase()) return false;
     if (requestedFuel && vehicle.fuel.toLowerCase() !== requestedFuel) return false;
     if (wantsElectric && vehicle.fuel.toLowerCase() !== 'electric') return false;
@@ -1608,26 +1962,18 @@ function buildAssistantResponse(prompt) {
     return true;
   });
 
-  if (!suggested.length && wantsBudgetList && budget) {
-    suggested = vehicles.filter((vehicle) => vehicle.price <= budget * 1.05);
-  }
-
-  if (!suggested.length) {
-    suggested = vehicles;
-  }
-
   if (requestedVehicle) {
     return `
       <div class="assistant-message">
         <div class="assistant-card">
-          <img src="${requestedVehicle.image}" alt="${requestedVehicle.brand} ${requestedVehicle.model}" />
+          <img src="${escapeHtml(requestedVehicle.image)}" alt="${escapeHtml(`${requestedVehicle.brand} ${requestedVehicle.model}`)}" />
           <div>
-            <strong>${requestedVehicle.brand} ${requestedVehicle.model} ${requestedVehicle.trim}</strong>
+            <strong>${escapeHtml(requestedVehicle.brand)} ${escapeHtml(requestedVehicle.model)} ${escapeHtml(requestedVehicle.trim || '')}</strong>
             <p>${formatPrice(requestedVehicle.price)}</p>
-            <small>${requestedVehicle.bodyType} · ${requestedVehicle.fuel} · ${requestedVehicle.availability}</small>
+            <small>${escapeHtml(requestedVehicle.bodyType)} · ${escapeHtml(requestedVehicle.fuel)} · ${escapeHtml(requestedVehicle.availability)}</small>
           </div>
         </div>
-        <p>${requestedVehicle.description}</p>
+        <p>${escapeHtml(requestedVehicle.description)}</p>
       </div>
     `;
   }
@@ -1649,6 +1995,15 @@ function buildAssistantResponse(prompt) {
     `;
   }
 
+  const hasVehicleConstraints = budget !== null || requestedType !== null || requestedFuel !== null
+    || wantsElectric || wantsSUV || wantsFamily || wantsPerformance;
+  if (!suggested.length && hasVehicleConstraints) {
+    const noMatch = isArabic
+      ? 'لا توجد سيارات في المخزون الحالي تطابق هذه المواصفات أو الميزانية. جرّب ميزانية أو نوع سيارة مختلفًا.'
+      : 'No vehicles in the current inventory match those preferences or that budget. Try a different budget or vehicle type.';
+    return `<div class="assistant-message">${noMatch}</div>`;
+  }
+
   const chosen = suggested.slice(0, 3);
   if (!chosen.length) {
     const noMatch = isArabic
@@ -1663,11 +2018,11 @@ function buildAssistantResponse(prompt) {
       <strong>${heading}</strong>
       ${chosen.map((vehicle) => `
         <div class="assistant-card">
-          <img src="${vehicle.image}" alt="${vehicle.brand} ${vehicle.model}" />
+          <img src="${escapeHtml(vehicle.image)}" alt="${escapeHtml(`${vehicle.brand} ${vehicle.model}`)}" />
           <div>
-            <strong>${vehicle.brand} ${vehicle.model} ${vehicle.trim}</strong>
+            <strong>${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)} ${escapeHtml(vehicle.trim || '')}</strong>
             <p>${formatPrice(vehicle.price)}</p>
-            <small>${vehicle.bodyType} · ${vehicle.fuel} · ${vehicle.availability}</small>
+            <small>${escapeHtml(vehicle.bodyType)} · ${escapeHtml(vehicle.fuel)} · ${escapeHtml(vehicle.availability)}</small>
           </div>
         </div>
       `).join('')}
@@ -1679,7 +2034,7 @@ function getAssistantQuickQuestions() {
   return state.lang === 'ar'
     ? [
         'ما هي الأقسام الموجودة في الموقع؟',
-        'ما هي السيارات المتاحة تحت ١٥٠ ألف دولار؟',
+        'ما هي السيارات المتاحة تحت ١٥ مليون جنيه؟',
         'ما هي سيارات الدفع الرباعي المتاحة؟',
         'أرني السيارات الكهربائية',
         'ما هي أرخص سيارة؟',
@@ -1688,7 +2043,7 @@ function getAssistantQuickQuestions() {
       ]
     : [
         'What departments are on the site?',
-        'What cars are available under $150,000?',
+        'What cars are available under EGP 15 million?',
         'Which SUVs are in stock?',
         'Show me electric vehicles',
         'What is the cheapest vehicle?',
@@ -1730,15 +2085,9 @@ function initializeHeroGallery() {
   const gallery = document.querySelector('.hero-gallery');
   if (!gallery) return;
 
-  HERO_GALLERY.forEach((item) => {
-    const image = new Image();
-    image.decoding = 'async';
-    image.src = item.image;
-  });
-
   gallery.innerHTML = HERO_GALLERY.map((item, index) => `
     <div class="hero-slide ${index === 0 ? 'is-active' : ''}" aria-hidden="${index === 0 ? 'false' : 'true'}">
-      <img src="${item.image}" alt="${item.title}" />
+      <img src="${item.image}" alt="${item.title}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async" fetchpriority="${index === 0 ? 'high' : 'low'}" />
       <div class="hero-slide__content">
         <span data-i18n="featuredOffer">${TRANSlations[state.lang].featuredOffer}</span>
         <strong data-i18n="heroSlideTitle${index + 1}">${state.lang === 'ar' ? TRANSlations.ar[`heroSlideTitle${index + 1}`] : item.title}</strong>
@@ -1757,6 +2106,11 @@ function initializeHeroGallery() {
   }
 
   const galleryIntervalMs = 2800;
+  const loadSlideImage = (index) => {
+    const image = slides[index]?.querySelector('img');
+    if (image && !image.complete) image.loading = 'eager';
+  };
+  loadSlideImage(1);
   const advanceSlide = () => {
     activeIndex = (activeIndex + 1) % slides.length;
     slides.forEach((slide, index) => {
@@ -1764,6 +2118,7 @@ function initializeHeroGallery() {
       slide.classList.toggle('is-active', isActive);
       slide.setAttribute('aria-hidden', String(!isActive));
     });
+    loadSlideImage((activeIndex + 1) % slides.length);
   };
   let intervalId = setInterval(advanceSlide, galleryIntervalMs);
 
@@ -1782,11 +2137,17 @@ function initializeHomePage() {
 
 function initializeDetailsPage() {
   renderDetailsPage();
+  renderBookingVehicleOptions();
+}
+
+function renderBookingVehicleOptions() {
   const bookingVehicle = document.getElementById('booking-vehicle');
   if (bookingVehicle) {
+    const requestedId = new URLSearchParams(window.location.search).get('id');
+    const selectedVehicle = window.VEHICLES.find((vehicle) => vehicle.id === requestedId) || window.VEHICLES[0];
     bookingVehicle.innerHTML = `<option value="" data-i18n="detailsSelectVehicle">${TRANSlations[state.lang].detailsSelectVehicle}</option>` + window.VEHICLES.map((vehicle) => `
-      <option value="${vehicle.id}" ${vehicle.id === (new URLSearchParams(window.location.search).get('id') || window.VEHICLES[0].id) ? 'selected' : ''}>
-        ${vehicle.brand} ${vehicle.model} (${vehicle.trim})
+      <option value="${escapeHtml(vehicle.id)}" ${vehicle.id === selectedVehicle?.id ? 'selected' : ''}>
+        ${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)} (${escapeHtml(vehicle.trim || '')})
       </option>
     `).join('');
   }
@@ -1802,16 +2163,351 @@ function initializeRegistrationPage() {
   });
 }
 
+function getCatalogStorageKey(collection) {
+  return collection === 'vehicles' ? STORAGE_KEYS.vehicles : STORAGE_KEYS.products;
+}
+
+function showAdminStatus(messageKey, isError = false) {
+  const status = document.getElementById('admin-status');
+  if (!status) return;
+  status.textContent = TRANSlations[state.lang][messageKey] || messageKey;
+  status.classList.toggle('is-error', isError);
+  status.classList.toggle('is-success', !isError);
+}
+
+function refreshCatalogViews() {
+  if (document.body.dataset.page === 'home') renderFeaturedVehicles();
+  if (document.body.dataset.page === 'inventory') renderInventory();
+  if (document.body.dataset.page === 'details') {
+    renderDetailsPage();
+    renderBookingVehicleOptions();
+  }
+  if (document.body.dataset.page === 'products') renderProductsPage();
+  if (document.body.dataset.page === 'admin') renderAdminCatalog();
+  updateComparePanel();
+  updateFavoriteButtons();
+  updateCompareButtons();
+}
+
+function saveCatalogRecords(collection, records, successMessageKey) {
+  try {
+    localStorage.setItem(getCatalogStorageKey(collection), JSON.stringify(records));
+  } catch (error) {
+    console.error(`Could not save ${collection} to browser storage.`, error);
+    showAdminStatus('adminStorageError', true);
+    return false;
+  }
+
+  window[collection === 'vehicles' ? 'VEHICLES' : 'PRODUCTS'] = records;
+  if (collection === 'vehicles') {
+    const activeIds = new Set(records.map((record) => record.id));
+    state.favorites = state.favorites.filter((id) => activeIds.has(id));
+    state.compare = state.compare.filter((id) => activeIds.has(id));
+    localStorage.setItem(STORAGE_KEYS.favorites, JSON.stringify(state.favorites));
+    localStorage.setItem(STORAGE_KEYS.compare, JSON.stringify(state.compare));
+  }
+  refreshCatalogViews();
+  showAdminStatus(successMessageKey);
+  return true;
+}
+
+function renderProductsPage() {
+  const grid = document.getElementById('products-grid');
+  const empty = document.getElementById('products-empty');
+  if (!grid) return;
+
+  grid.innerHTML = window.PRODUCTS.map((product) => {
+    const name = state.lang === 'ar' ? product.nameAr || product.name : product.name;
+    const description = state.lang === 'ar' ? product.descriptionAr || product.description : product.description;
+    const image = product.image ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(name)}" loading="lazy" />` : '';
+    const stockText = Number(product.quantity) > 0
+      ? TRANSlations[state.lang].productStock
+      : TRANSlations[state.lang].productOutOfStock;
+    return `
+      <article class="product-card">
+        <div class="product-card__media">${image}</div>
+        <div class="product-card__body">
+          <h2>${escapeHtml(name)}</h2>
+          <p>${escapeHtml(description)}</p>
+          <div class="product-card__footer">
+            <strong>${formatPrice(Number(product.price))}</strong>
+            <span class="${Number(product.quantity) > 0 ? 'is-in-stock' : 'is-out-of-stock'}">${stockText}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  if (empty) empty.hidden = window.PRODUCTS.length > 0;
+  grid.hidden = window.PRODUCTS.length === 0;
+}
+
+function renderAdminCatalog() {
+  const vehicleList = document.getElementById('admin-vehicle-list');
+  const productList = document.getElementById('admin-product-list');
+  if (!vehicleList || !productList) return;
+
+  const vehicleCount = document.getElementById('admin-vehicle-count');
+  const productCount = document.getElementById('admin-product-count');
+  if (vehicleCount) vehicleCount.textContent = `${window.VEHICLES.length} ${TRANSlations[state.lang].adminVehicleCount}`;
+  if (productCount) productCount.textContent = `${window.PRODUCTS.length} ${TRANSlations[state.lang].adminProductCount}`;
+
+  vehicleList.innerHTML = window.VEHICLES.map((vehicle) => `
+    <article class="admin-item">
+      <img src="${escapeHtml(vehicle.image || '')}" alt="" loading="lazy" />
+      <div class="admin-item__details">
+        <strong>${escapeHtml(`${vehicle.brand} ${vehicle.model} ${vehicle.trim || ''}`)}</strong>
+        <span>${escapeHtml(String(vehicle.year))} · ${formatPrice(Number(vehicle.price))}</span>
+      </div>
+      <div class="admin-item__actions">
+        <button class="btn btn-secondary" type="button" data-edit-vehicle="${escapeHtml(vehicle.id)}">${escapeHtml(TRANSlations[state.lang].adminEdit)}</button>
+        <button class="btn btn-danger" type="button" data-delete-vehicle="${escapeHtml(vehicle.id)}">${escapeHtml(TRANSlations[state.lang].adminDelete)}</button>
+      </div>
+    </article>
+  `).join('') || `<p class="admin-empty">${escapeHtml(TRANSlations[state.lang].adminVehicleEmpty)}</p>`;
+
+  productList.innerHTML = window.PRODUCTS.map((product) => `
+    <article class="admin-item">
+      <img src="${escapeHtml(product.image || '')}" alt="" loading="lazy" />
+      <div class="admin-item__details">
+        <strong>${escapeHtml(state.lang === 'ar' ? product.nameAr || product.name : product.name)}</strong>
+        <span>${formatPrice(Number(product.price))} · ${escapeHtml(String(product.quantity))} ${escapeHtml(TRANSlations[state.lang].adminQuantity)}</span>
+      </div>
+      <div class="admin-item__actions">
+        <button class="btn btn-secondary" type="button" data-edit-product="${escapeHtml(product.id)}">${escapeHtml(TRANSlations[state.lang].adminEdit)}</button>
+        <button class="btn btn-danger" type="button" data-delete-product="${escapeHtml(product.id)}">${escapeHtml(TRANSlations[state.lang].adminDelete)}</button>
+      </div>
+    </article>
+  `).join('') || `<p class="admin-empty">${escapeHtml(TRANSlations[state.lang].adminProductEmpty)}</p>`;
+}
+
+function setEditorValues(form, record, fields) {
+  fields.forEach((field) => {
+    const input = form.elements.namedItem(field);
+    if (input) input.value = record[field] ?? '';
+  });
+}
+
+function openAdminEditor(form, record, fields) {
+  form.hidden = false;
+  form.dataset.editId = record?.id || '';
+  setEditorValues(form, record || {}, fields);
+  const isVehicleForm = form.id === 'vehicle-admin-form';
+  const titleKey = record
+    ? (isVehicleForm ? 'adminEditVehicleTitle' : 'adminEditProductTitle')
+    : (isVehicleForm ? 'adminAddVehicle' : 'adminAddProduct');
+  const title = form.querySelector('h2');
+  if (title) {
+    title.dataset.i18n = titleKey;
+    title.textContent = TRANSlations[state.lang][titleKey];
+  }
+  form.querySelector('input, select, textarea')?.focus();
+  form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function closeAdminEditor(form) {
+  form.reset();
+  delete form.dataset.editId;
+  form.hidden = true;
+  const titleKey = form.id === 'vehicle-admin-form' ? 'adminAddVehicle' : 'adminAddProduct';
+  const title = form.querySelector('h2');
+  if (title) {
+    title.dataset.i18n = titleKey;
+    title.textContent = TRANSlations[state.lang][titleKey];
+  }
+}
+
+function createCatalogId(values, collection) {
+  const base = values.filter(Boolean).join('-').toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || `${collection}-${Date.now()}`;
+  let id = base;
+  let suffix = 2;
+  const existing = collection === 'vehicles' ? window.VEHICLES : window.PRODUCTS;
+  while (existing.some((record) => record.id === id)) {
+    id = `${base}-${suffix}`;
+    suffix += 1;
+  }
+  return id;
+}
+
+function initializeAdminPage() {
+  const vehicleForm = document.getElementById('vehicle-admin-form');
+  const productForm = document.getElementById('product-admin-form');
+  if (!vehicleForm || !productForm) return;
+
+  const vehicleFields = ['brand', 'model', 'trim', 'year', 'price', 'mileage', 'horsepower', 'engine', 'seats', 'transmission', 'fuel', 'bodyType', 'condition', 'availability', 'image', 'description', 'descriptionAr'];
+  const productFields = ['name', 'nameAr', 'price', 'quantity', 'image', 'description', 'descriptionAr'];
+
+  document.querySelectorAll('[data-admin-tab]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const selectedTab = button.dataset.adminTab;
+      document.querySelectorAll('[data-admin-tab]').forEach((tab) => {
+        tab.classList.toggle('is-active', tab === button);
+        tab.setAttribute('aria-selected', String(tab === button));
+      });
+      document.querySelectorAll('[data-admin-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.adminPanel !== selectedTab;
+      });
+    });
+  });
+
+  document.getElementById('admin-add-vehicle')?.addEventListener('click', () => openAdminEditor(vehicleForm, null, vehicleFields));
+  document.getElementById('admin-add-product')?.addEventListener('click', () => openAdminEditor(productForm, null, productFields));
+  document.querySelectorAll('[data-admin-cancel]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const form = button.closest('form');
+      if (form) closeAdminEditor(form);
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const editVehicleId = target.closest('[data-edit-vehicle]')?.getAttribute('data-edit-vehicle');
+    const editProductId = target.closest('[data-edit-product]')?.getAttribute('data-edit-product');
+    const deleteVehicleId = target.closest('[data-delete-vehicle]')?.getAttribute('data-delete-vehicle');
+    const deleteProductId = target.closest('[data-delete-product]')?.getAttribute('data-delete-product');
+
+    if (editVehicleId) {
+      openAdminEditor(vehicleForm, window.VEHICLES.find((vehicle) => vehicle.id === editVehicleId), vehicleFields);
+    } else if (editProductId) {
+      openAdminEditor(productForm, window.PRODUCTS.find((product) => product.id === editProductId), productFields);
+    } else if (deleteVehicleId && window.confirm(TRANSlations[state.lang].adminConfirmDelete)) {
+      const records = window.VEHICLES.filter((vehicle) => vehicle.id !== deleteVehicleId);
+      if (saveCatalogRecords('vehicles', records, 'adminVehicleDeleted')) closeAdminEditor(vehicleForm);
+    } else if (deleteProductId && window.confirm(TRANSlations[state.lang].adminConfirmDelete)) {
+      const records = window.PRODUCTS.filter((product) => product.id !== deleteProductId);
+      if (saveCatalogRecords('products', records, 'adminProductDeleted')) closeAdminEditor(productForm);
+    }
+  });
+
+  vehicleForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!vehicleForm.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(vehicleForm).entries());
+    const price = Number(data.price);
+    const year = Number(data.year);
+    const mileage = Number(data.mileage);
+    const horsepower = Number(data.horsepower);
+    const seats = Number(data.seats);
+    if (!Number.isFinite(price) || price <= 0 || !Number.isInteger(year) || !Number.isFinite(mileage) || mileage < 0
+      || !Number.isFinite(horsepower) || horsepower <= 0 || !Number.isInteger(seats) || seats < 1) {
+      showAdminStatus('adminInvalidPrice', true);
+      return;
+    }
+
+    const existing = window.VEHICLES.find((vehicle) => vehicle.id === vehicleForm.dataset.editId);
+    const id = existing?.id || createCatalogId([data.brand, data.model, data.trim], 'vehicles');
+    const vehicle = {
+      ...(existing || {}),
+      id,
+      brand: data.brand.trim(),
+      model: data.model.trim(),
+      trim: data.trim.trim(),
+      year,
+      price,
+      mileage,
+      horsepower,
+      engine: data.engine.trim(),
+      seats,
+      transmission: data.transmission,
+      fuel: data.fuel,
+      bodyType: data.bodyType,
+      category: data.bodyType,
+      condition: data.condition,
+      availability: data.availability,
+      image: data.image.trim(),
+      gallery: existing?.gallery?.length ? existing.gallery : [data.image.trim()],
+      description: data.description.trim(),
+      descriptionAr: data.descriptionAr.trim(),
+      specs: {
+        ...(existing?.specs || {}),
+        Power: `${horsepower} hp`,
+        Engine: data.engine.trim(),
+        Seats: String(seats)
+      },
+      features: existing?.features || [],
+      featuresAr: existing?.featuresAr || []
+    };
+    const records = existing
+      ? window.VEHICLES.map((item) => item.id === existing.id ? vehicle : item)
+      : [...window.VEHICLES, vehicle];
+    if (saveCatalogRecords('vehicles', records, 'adminVehicleSaved')) closeAdminEditor(vehicleForm);
+  });
+
+  productForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!productForm.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(productForm).entries());
+    const price = Number(data.price);
+    const quantity = Number(data.quantity);
+    if (!Number.isFinite(price) || price < 0 || !Number.isInteger(quantity) || quantity < 0) {
+      showAdminStatus('adminInvalidPrice', true);
+      return;
+    }
+
+    const existing = window.PRODUCTS.find((product) => product.id === productForm.dataset.editId);
+    const product = {
+      id: existing?.id || createCatalogId([data.name], 'products'),
+      name: data.name.trim(),
+      nameAr: data.nameAr.trim(),
+      price,
+      quantity,
+      image: data.image.trim(),
+      description: data.description.trim(),
+      descriptionAr: data.descriptionAr.trim()
+    };
+    const records = existing
+      ? window.PRODUCTS.map((item) => item.id === existing.id ? product : item)
+      : [...window.PRODUCTS, product];
+    if (saveCatalogRecords('products', records, 'adminProductSaved')) closeAdminEditor(productForm);
+  });
+
+  renderAdminCatalog();
+}
+
+function handleCatalogStorageChange(event) {
+  if (event.key === STORAGE_KEYS.vehicles) {
+    window.VEHICLES = normalizeCatalogImagePaths(readCatalogRecords(
+      event.key,
+      window.VEHICLES,
+      (vehicle) => vehicle && typeof vehicle.id === 'string' && typeof vehicle.brand === 'string'
+        && typeof vehicle.model === 'string' && Number.isFinite(Number(vehicle.price))
+    ), true);
+  } else if (event.key === STORAGE_KEYS.products) {
+    window.PRODUCTS = normalizeCatalogImagePaths(readCatalogRecords(
+      event.key,
+      window.PRODUCTS,
+      (product) => product && typeof product.id === 'string' && typeof product.name === 'string'
+        && Number.isFinite(Number(product.price)) && Number.isFinite(Number(product.quantity))
+    ));
+  } else {
+    return;
+  }
+  refreshCatalogViews();
+}
+
 function initializePage() {
   setTheme(state.theme);
   setLanguage(state.lang);
   bindGlobalEvents();
+  window.addEventListener('storage', handleCatalogStorageChange);
+  const currentPath = window.location.pathname;
+  const currentHash = window.location.hash;
+  document.querySelectorAll('.main-nav a').forEach((link) => {
+    const linkUrl = new URL(link.href, window.location.href);
+    if (linkUrl.pathname === currentPath && linkUrl.hash === currentHash) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
 
   const assistantToggle = document.getElementById('assistant-toggle');
   const assistantWidget = document.getElementById('assistant-widget');
   if (assistantToggle && assistantWidget) {
     assistantWidget.classList.remove('is-open');
     assistantWidget.classList.remove('is-minimized');
+    assistantWidget.setAttribute('aria-hidden', 'true');
+    assistantToggle.setAttribute('aria-expanded', 'false');
     assistantToggle.style.display = 'block';
   }
 
@@ -1848,6 +2544,9 @@ function initializePage() {
 
   if (document.body.dataset.page === 'register') {
     initializeRegistrationPage();
+  }
+  if (document.body.dataset.page === 'admin') {
+    initializeAdminPage();
   }
 
   renderAssistantQuickQuestions();
