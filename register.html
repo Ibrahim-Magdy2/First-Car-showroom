@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Send a direct WhatsApp registration form for dealership sales, finance, and service inquiries." />
+    <title>Your Brand | Register via WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vehicle-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="register">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Your Brand home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Your Brand</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="index.html" data-i18n="navHome">Home</a>
+          <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="sales.html" data-i18n="navSales">Sales</a>
+          <a href="finance.html" data-i18n="navFinance">Finance</a>
+          <a href="service.html" data-i18n="navService">Service</a>
+          <a href="register.html" data-i18n="navRegister">Register</a>
+        </nav>
+        <div class="control-row">
+          <button id="theme-toggle" class="icon-button" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
+          <div class="lang-switcher" aria-label="Language switcher" data-i18n-aria-label="languageSwitcher">
+            <button class="lang-option is-active" data-lang-option="en" aria-pressed="true">EN</button>
+            <button class="lang-option" data-lang-option="ar" aria-pressed="false">AR</button>
+          </div>
+          <button id="compare-toggle" class="ghost-button" type="button">Compare <span class="compare-badge" data-compare-count>0</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="register-page">
+      <div class="container register-shell" data-reveal>
+        <div class="register-sidebar">
+          <span class="eyebrow" data-i18n="registerEyebrow">Direct registration</span>
+          <h1 data-i18n="registerTitle">Speak with a dealership specialist.</h1>
+          <p data-i18n="registerIntro">Complete the form to prepare a message you can share on WhatsApp.</p>
+          <ul class="info-list">
+            <li><i class="fas fa-phone"></i> <span data-i18n="registerPhoneLabel">WhatsApp:</span> <span data-i18n="registerPhonePlaceholder">010xxxxxxxx</span></li>
+            <li><i class="fas fa-clock"></i> <span data-i18n="registerHours">Response time: within business hours</span></li>
+            <li><i class="fas fa-car"></i> <span data-i18n="registerSupport">Sales, finance, and service support</span></li>
+          </ul>
+        </div>
+
+        <form id="whatsapp-registration-form" class="register-form" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="customer-name" data-i18n="registerName">Full Name</label>
+              <input id="customer-name" type="text" data-i18n-placeholder="registerNamePlaceholder" placeholder="Your full name" required />
+            </div>
+            <div class="form-field">
+              <label for="customer-phone" data-i18n="registerPhone">Phone Number</label>
+              <input id="customer-phone" type="tel" data-i18n-placeholder="registerPhonePlaceholder" placeholder="010xxxxxxxx" required />
+            </div>
+            <div class="form-field">
+              <label for="registration-department" data-i18n="registerDepartment">Department</label>
+              <select id="registration-department" required>
+                <option value="Sales" data-i18n="registerSalesOption">Sales</option>
+                <option value="Finance" data-i18n="registerFinanceOption">Finance</option>
+                <option value="Service" data-i18n="registerServiceOption">Service</option>
+                <option value="General inquiry" data-i18n="registerGeneralOption">General inquiry</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="registration-interest" data-i18n="registerInterest">Vehicle Interest</label>
+              <select id="registration-interest">
+                <option value="SUV" data-i18n="categorySUV">SUV</option>
+                <option value="Sedan" data-i18n="categorySedan">Sedan</option>
+                <option value="Coupe" data-i18n="categoryCoupe">Coupe</option>
+                <option value="Sports" data-i18n="categorySports">Sports</option>
+                <option value="Luxury" data-i18n="categoryLuxury">Luxury</option>
+                <option value="Electric" data-i18n="categoryElectric">Electric</option>
+                <option value="General inquiry" data-i18n="registerGeneralOption">General inquiry</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="registration-budget" data-i18n="registerBudget">Budget</label>
+              <input id="registration-budget" type="text" data-i18n-placeholder="registerBudgetPlaceholder" placeholder="Example: EGP 10,000,000" />
+            </div>
+            <div class="form-field">
+              <label for="registration-time" data-i18n="registerTime">Preferred Contact Time</label>
+              <input id="registration-time" type="text" data-i18n-placeholder="registerTimePlaceholder" placeholder="Example: Afternoon" />
+            </div>
+            <div class="form-field form-field--full">
+              <label for="registration-notes" data-i18n="registerNotes">Message</label>
+              <textarea id="registration-notes" rows="4" data-i18n-placeholder="registerNotesPlaceholder" placeholder="Tell us what you are looking for..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-footer register-footer">
+            <button class="btn btn-primary" type="submit" data-i18n="sendViaWhatsApp">Send via WhatsApp</button>
+            <div id="registration-message" class="registration-message" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

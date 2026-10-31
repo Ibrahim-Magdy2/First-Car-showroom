@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse premium vehicles from the Your Brand inventory, including filterable search, favorites, and comparison tools." />
+    <title>Your Brand | Vehicle Inventory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vehicle-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="inventory">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Your Brand home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Your Brand</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="index.html" data-i18n="navHome">Home</a>
+          <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="index.html#offers" data-i18n="navbarOffers">Offers</a>
+          <a href="index.html#contact" data-i18n="navbarContact">Contact</a>
+        </nav>
+
+        <div class="control-row">
+          <button id="theme-toggle" class="icon-button" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
+          <div class="lang-switcher" aria-label="Language switcher" data-i18n-aria-label="languageSwitcher">
+            <button class="lang-option is-active" data-lang-option="en" aria-pressed="true">EN</button>
+            <button class="lang-option" data-lang-option="ar" aria-pressed="false">AR</button>
+          </div>
+          <button id="compare-toggle" class="ghost-button" type="button">Compare <span class="compare-badge" data-compare-count>0</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="inventory-page">
+      <div class="container inventory-shell">
+        <aside class="filters-panel" aria-label="Vehicle filters" data-i18n-aria-label="inventoryFilters" data-reveal>
+          <div class="filter-group">
+            <label for="inventory-search" data-i18n="inventorySearch">Search</label>
+            <input id="inventory-search" class="filter-input" type="search" data-i18n-placeholder="inventorySearchPlaceholder" placeholder="Search by brand or model" />
+          </div>
+
+          <div class="filter-group">
+            <label for="brand-filter" data-i18n="inventoryBrand">Brand</label>
+            <select id="brand-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAllBrands">All brands</option>
+              <option value="Audi">Audi</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="Porsche">Porsche</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="Range Rover">Range Rover</option>
+              <option value="Tesla">Tesla</option>
+              <option value="Lexus">Lexus</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="price-filter" data-i18n="inventoryPrice">Price</label>
+            <select id="price-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAnyPrice">Any price</option>
+              <option value="under-10m" data-i18n="inventoryUnder10m">Under EGP 10 million</option>
+              <option value="10m-15m" data-i18n="inventoryPrice10To15m">EGP 10-15 million</option>
+              <option value="15m-20m" data-i18n="inventoryPrice15To20m">EGP 15-20 million</option>
+              <option value="20m-30m" data-i18n="inventoryPrice20To30m">EGP 20-30 million</option>
+              <option value="30m-plus" data-i18n="inventoryPrice30mPlus">EGP 30 million+</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="year-filter" data-i18n="inventoryYear">Year</label>
+            <select id="year-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAnyYear">Any year</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="body-type-filter" data-i18n="inventoryBodyType">Body Type</label>
+            <select id="body-type-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAnyBodyType">Any body type</option>
+              <option value="SUV" data-i18n="categorySUV">SUV</option>
+              <option value="Sedan" data-i18n="categorySedan">Sedan</option>
+              <option value="Coupe" data-i18n="categoryCoupe">Coupe</option>
+              <option value="Sports" data-i18n="categorySports">Sports</option>
+              <option value="Luxury" data-i18n="categoryLuxury">Luxury</option>
+              <option value="Electric" data-i18n="categoryElectric">Electric</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="fuel-filter" data-i18n="inventoryFuelType">Fuel Type</label>
+            <select id="fuel-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAnyFuelType">Any fuel type</option>
+              <option value="Petrol" data-i18n="inventoryPetrol">Petrol</option>
+              <option value="Electric" data-i18n="inventoryElectric">Electric</option>
+              <option value="Hybrid" data-i18n="inventoryHybrid">Hybrid</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="transmission-filter" data-i18n="inventoryTransmission">Transmission</label>
+            <select id="transmission-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAnyTransmission">Any transmission</option>
+              <option value="Automatic" data-i18n="inventoryAutomatic">Automatic</option>
+              <option value="Manual" data-i18n="inventoryManual">Manual</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="condition-filter" data-i18n="inventoryCondition">Condition</label>
+            <select id="condition-filter" class="filter-select">
+              <option value="all" data-i18n="inventoryAnyCondition">Any condition</option>
+              <option value="New" data-i18n="inventoryNew">New</option>
+              <option value="Certified" data-i18n="inventoryCertified">Certified</option>
+              <option value="Pre-Owned" data-i18n="inventoryPreOwned">Pre-Owned</option>
+            </select>
+          </div>
+
+          <div class="filter-row">
+            <button id="clear-filters" class="btn btn-secondary" type="button" data-i18n="inventoryClearAll">Clear All</button>
+          </div>
+        </aside>
+
+        <section class="catalog-panel" aria-label="Inventory catalog" data-i18n-aria-label="inventoryCatalog" data-reveal>
+          <div class="toolbar">
+            <div class="result-count"><span id="inventory-count">0</span> <span data-i18n="inventoryVehicles">vehicles</span></div>
+            <div class="sort-box">
+              <label for="sort-select" class="sr-only" style="position:absolute;left:-9999px;" data-i18n="inventorySortVehicles">Sort vehicles</label>
+              <select id="sort-select" class="filter-select" aria-label="Sort vehicles" data-i18n-aria-label="inventorySortVehicles">
+                <option value="newest" data-i18n="inventoryNewest">Newest</option>
+                <option value="price-low" data-i18n="inventoryPriceLow">Price: Low to high</option>
+                <option value="price-high" data-i18n="inventoryPriceHigh">Price: High to low</option>
+                <option value="mileage-low" data-i18n="inventoryMileageLow">Mileage: Low to high</option>
+                <option value="mileage-high" data-i18n="inventoryMileageHigh">Mileage: High to low</option>
+                <option value="oldest" data-i18n="inventoryOldest">Oldest</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="inventory-grid" class="inventory-grid" aria-live="polite"></div>
+          <div id="empty-state" class="empty-state" hidden></div>
+
+          <div class="favorite-list">
+            <div class="section-header">
+              <h2>Favorites</h2>
+            </div>
+            <div id="favorites-grid" class="favorites-grid" aria-live="polite"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <aside id="compare-panel" class="compare-panel" aria-label="Vehicle comparison panel" data-i18n-aria-label="compareTitle" aria-hidden="true">
+      <div class="compare-panel__header">
+        <h3>Comparison Board</h3>
+        <button id="compare-close" class="icon-button" type="button" aria-label="Close comparison panel" data-i18n-aria-label="closeComparison"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="compare-panel__body">
+        <table id="compare-table" class="compare-table"></table>
+      </div>
+    </aside>
+
+    <aside id="assistant-widget" class="assistant-widget" aria-live="polite">
+      <div class="assistant-header">
+        <strong><span class="dot"></span> Dealership Assistant</strong>
+        <div class="assistant-actions">
+          <button id="assistant-minimize" type="button" aria-label="Minimize assistant"><i class="fas fa-window-minimize"></i></button>
+          <button id="assistant-close" type="button" aria-label="Close assistant"><i class="fas fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="assistant-body">
+        <div id="assistant-output" class="assistant-message">I can recommend vehicles from the current inventory, explain differences, and help you book a test drive.</div>
+      </div>
+      <div class="assistant-form">
+        <form id="assistant-form">
+          <input id="assistant-input" type="text" placeholder="Ask about budget, features, or vehicle matching…" />
+          <button type="submit">Ask</button>
+        </form>
+      </div>
+    </aside>
+
+    <button id="assistant-toggle" class="btn btn-primary assistant-reopen" type="button">Open Assistant</button>
+  </body>
+</html>

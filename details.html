@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore detailed specifications, features, gallery, financing, and test-drive booking for a selected premium vehicle." />
+    <title>Your Brand | Vehicle Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vehicle-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="details">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Your Brand home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Your Brand</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="index.html" data-i18n="navHome">Home</a>
+          <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="index.html#offers" data-i18n="navbarOffers">Offers</a>
+          <a href="index.html#contact" data-i18n="navbarContact">Contact</a>
+        </nav>
+
+        <div class="control-row">
+          <button id="theme-toggle" class="icon-button" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
+          <div class="lang-switcher" aria-label="Language switcher" data-i18n-aria-label="languageSwitcher">
+            <button class="lang-option is-active" data-lang-option="en" aria-pressed="true">EN</button>
+            <button class="lang-option" data-lang-option="ar" aria-pressed="false">AR</button>
+          </div>
+          <button id="compare-toggle" class="ghost-button" type="button"><span data-compare-label>Compare</span> <span class="compare-badge" data-compare-count>0</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="detail-page">
+      <div id="vehicle-detail-root" class="container">
+        <section class="detail-hero" data-reveal>
+          <div class="image-gallery">
+            <div id="gallery-main" class="main-image-box" aria-label="Vehicle gallery main image">
+              <img id="gallery-main-image" src="" alt="Vehicle image" />
+              <div class="gallery-nav">
+                <button id="gallery-prev" class="gallery-control" type="button" aria-label="Previous image" data-i18n-aria-label="detailsPreviousImage"><i class="fas fa-chevron-left"></i></button>
+                <button id="gallery-next" class="gallery-control" type="button" aria-label="Next image" data-i18n-aria-label="detailsNextImage"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <div id="gallery-thumbs" class="gallery-thumbs"></div>
+          </div>
+
+          <aside class="detail-summary">
+            <div>
+              <h1 id="detail-title">Vehicle</h1>
+            </div>
+
+            <div class="detail-price-line">
+              <div class="detail-price-group">
+                <div class="big-price" id="detail-price">EGP 0</div>
+                <small class="price-estimate-note" data-i18n="priceEstimateNote">Indicative showroom price; confirm with the dealer.</small>
+              </div>
+              <span id="detail-availability" class="availability-pill">Available</span>
+            </div>
+
+            <div class="vehicle-actions">
+              <button class="action-button" id="favorite-button" data-favorite-id="" type="button"><i class="fas fa-heart"></i> <span data-i18n="detailsFavorite">Favorite</span></button>
+              <button class="action-button" id="compare-button" data-compare-id="" type="button"><i class="fas fa-balance-scale"></i> <span data-i18n="detailsCompare">Compare</span></button>
+              <a id="details-whatsapp" class="action-button" href="#" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i> <span data-i18n="detailsWhatsApp">WhatsApp</span></a>
+              <button id="details-test-drive" class="action-button" type="button"><i class="fas fa-calendar-check"></i> <span data-i18n="detailsTestDrive">Test Drive</span></button>
+            </div>
+
+            <div class="summary-grid">
+              <div class="summary-item"><span data-i18n="compareYear">Year</span><strong id="summary-year">-</strong></div>
+              <div class="summary-item"><span data-i18n="detailsTrim">Trim</span><strong id="summary-trim">-</strong></div>
+              <div class="summary-item"><span data-i18n="compareTransmission">Transmission</span><strong id="summary-transmission">-</strong></div>
+              <div class="summary-item"><span data-i18n="compareFuel">Fuel</span><strong id="summary-fuel">-</strong></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="content-grid" data-reveal>
+          <article class="detail-card">
+            <h3 data-i18n="detailsOverview">Overview</h3>
+            <p id="detail-description"></p>
+            <ul id="vehicle-features" class="feature-list"></ul>
+          </article>
+
+          <aside class="detail-card">
+            <h3 data-i18n="detailsTechnicalSpecs">Technical Specs</h3>
+            <div id="vehicle-specs" class="spec-list"></div>
+          </aside>
+        </section>
+
+        <section class="detail-card" style="margin-top: 26px;" data-reveal>
+          <h3 data-i18n="detailsSimilarVehicles">Similar Vehicles</h3>
+          <div id="similar-vehicles" class="similar-grid"></div>
+        </section>
+
+        <section class="finance-panel" data-reveal>
+          <h3 data-i18n="calculatorTitle">Financing Calculator</h3>
+          <form id="financing-form">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="vehicle-price" data-i18n="detailsVehiclePrice">Vehicle Price</label>
+                <input id="vehicle-price" type="number" min="0" step="1000" value="15500000" required />
+              </div>
+              <div class="form-field">
+                <label for="down-payment" data-i18n="detailsDownPayment">Down Payment</label>
+                <input id="down-payment" type="number" min="0" step="1000" value="3100000" required />
+              </div>
+              <div class="form-field">
+                <label for="interest-rate" data-i18n="detailsInterestRate">Interest Rate (%)</label>
+                <input id="interest-rate" type="number" min="0" step="0.1" value="4.5" required />
+              </div>
+              <div class="form-field">
+                <label for="loan-duration" data-i18n="detailsLoanDuration">Loan Duration (years)</label>
+                <input id="loan-duration" type="number" min="1" step="1" value="5" required />
+              </div>
+            </div>
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit" data-i18n="detailsCalculateEstimate">Calculate Estimate</button>
+              <div id="financing-result" class="result-box" data-i18n="estimateNote">Estimate only — not an official financing offer.</div>
+            </div>
+          </form>
+        </section>
+
+        <section class="booking-panel" data-reveal>
+          <h3 data-i18n="bookingTitle">Book a Test Drive</h3>
+          <form id="booking-form">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="booking-vehicle" data-i18n="detailsBookingVehicle">Vehicle</label>
+                <select id="booking-vehicle" required>
+                  <option value="" data-i18n="detailsSelectVehicle">Select a vehicle</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="customer-name" data-i18n="detailsCustomerName">Customer Name</label>
+                <input id="customer-name" type="text" data-i18n-placeholder="registerNamePlaceholder" placeholder="Your name" required />
+              </div>
+              <div class="form-field">
+                <label for="customer-phone" data-i18n="registerPhone">Phone</label>
+                <input id="customer-phone" type="tel" data-i18n-placeholder="registerPhonePlaceholder" placeholder="010xxxxxxxx" required />
+              </div>
+              <div class="form-field">
+                <label for="booking-date" data-i18n="detailsPreferredDate">Preferred Date</label>
+                <input id="booking-date" type="date" required />
+              </div>
+              <div class="form-field">
+                <label for="booking-time" data-i18n="detailsPreferredTime">Preferred Time</label>
+                <select id="booking-time" required>
+                  <option value="" data-i18n="detailsSelectTime">Select a time</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="17:00">17:00</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="booking-notes" data-i18n="detailsMessage">Message</label>
+                <textarea id="booking-notes" rows="3" data-i18n-placeholder="detailsOptionalNotes" placeholder="Optional notes"></textarea>
+              </div>
+            </div>
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit" data-i18n="detailsSubmitBooking">Submit Booking</button>
+              <div id="booking-message" class="booking-message"></div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <aside id="compare-panel" class="compare-panel" aria-label="Vehicle comparison panel" data-i18n-aria-label="compareTitle" aria-hidden="true">
+      <div class="compare-panel__header">
+        <h3 data-i18n="compareTitle">Comparison Board</h3>
+        <button id="compare-close" class="icon-button" type="button" aria-label="Close comparison panel" data-i18n-aria-label="closeComparison"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="compare-panel__body">
+        <table id="compare-table" class="compare-table"></table>
+      </div>
+    </aside>
+
+    <aside id="assistant-widget" class="assistant-widget" aria-live="polite">
+      <div class="assistant-header">
+        <strong><span class="dot"></span> Dealership Assistant</strong>
+        <div class="assistant-actions">
+          <button id="assistant-minimize" type="button" aria-label="Minimize assistant"><i class="fas fa-window-minimize"></i></button>
+          <button id="assistant-close" type="button" aria-label="Close assistant"><i class="fas fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="assistant-body">
+        <div id="assistant-output" class="assistant-message">I can recommend vehicles from the current inventory, explain differences, and help you book a test drive.</div>
+      </div>
+      <div class="assistant-form">
+        <form id="assistant-form">
+          <input id="assistant-input" type="text" placeholder="Ask about budget, features, or vehicle matching…" />
+          <button type="submit">Ask</button>
+        </form>
+      </div>
+    </aside>
+
+    <button id="assistant-toggle" class="btn btn-primary assistant-reopen" type="button">Open Assistant</button>
+
+    <div id="lightbox-overlay" class="lightbox-overlay" aria-label="Image lightbox" role="dialog">
+      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image">×</button>
+      <img src="" alt="Expanded vehicle view" />
+    </div>
+  </body>
+</html>

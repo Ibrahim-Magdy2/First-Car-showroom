@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your Brand sales department helps customers choose the right premium vehicle and complete a fast, informed purchase process." />
+    <title>Your Brand | Sales Department</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vehicle-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="sales">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Your Brand home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Your Brand</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="index.html" data-i18n="navHome">Home</a>
+          <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="sales.html" data-i18n="navSales">Sales</a>
+          <a href="finance.html" data-i18n="navFinance">Finance</a>
+          <a href="service.html" data-i18n="navService">Service</a>
+          <a href="register.html" data-i18n="navRegister">Register</a>
+        </nav>
+        <div class="control-row">
+          <button id="theme-toggle" class="icon-button" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
+          <div class="lang-switcher" aria-label="Language switcher" data-i18n-aria-label="languageSwitcher">
+            <button class="lang-option is-active" data-lang-option="en" aria-pressed="true">EN</button>
+            <button class="lang-option" data-lang-option="ar" aria-pressed="false">AR</button>
+          </div>
+          <button id="compare-toggle" class="ghost-button" type="button">Compare <span class="compare-badge" data-compare-count>0</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="department-page">
+      <div class="container department-hero" data-reveal>
+        <div>
+          <span class="eyebrow" data-i18n="salesEyebrow">Sales Department</span>
+          <h1 data-i18n="salesTitle">Drive away with confidence.</h1>
+          <p data-i18n="salesText">Our sales team matches customers with the right vehicle based on performance, comfort, family needs, and budget.</p>
+          <div class="hero-actions">
+            <a href="inventory.html" class="btn btn-primary" data-i18n="browseInventory">Browse Inventory</a>
+            <a href="register.html" class="btn btn-secondary" data-i18n="requestCall">Request a Call</a>
+          </div>
+        </div>
+        <div class="department-visual">
+          <img src="ron-muller-4bB2LE9jkag-unsplash.jpg" alt="Luxury dealership sales desk" />
+        </div>
+      </div>
+
+      <section class="container department-content" data-reveal>
+        <div class="department-grid">
+          <article class="department-card service-feature">
+            <div class="icon"><i class="fas fa-user-check"></i></div>
+            <h3 data-i18n="salesTailoredMatchmaking">Tailored Matchmaking</h3>
+            <p data-i18n="salesTailoredMatchmakingText">We compare your lifestyle, driving habits, and budget to shortlist the right model before the first visit.</p>
+          </article>
+          <article class="department-card service-feature">
+            <div class="icon"><i class="fas fa-arrows-rotate"></i></div>
+            <h3 data-i18n="salesTradeInGuidance">Trade-In Guidance</h3>
+            <p data-i18n="salesTradeInGuidanceText">We evaluate your current vehicle, explain value clearly, and integrate it into your next purchase plan.</p>
+          </article>
+          <article class="department-card service-feature">
+            <div class="icon"><i class="fas fa-gift"></i></div>
+            <h3 data-i18n="salesDeliveryExperience">Delivery Experience</h3>
+            <p data-i18n="salesDeliveryExperienceText">From premium accessories to handover planning, every detail is managed for a polished buying experience.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

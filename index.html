@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your Brand offers premium luxury, performance, and electric vehicles with concierge support and tailored financing." />
+    <title>Your Brand | Premium Car Dealership</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vehicle-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Your Brand home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Your Brand</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="inventory.html" data-i18n="navInventory">Inventory</a>
+          <a href="sales.html" data-i18n="navSales">Sales</a>
+          <a href="finance.html" data-i18n="navFinance">Finance</a>
+          <a href="service.html" data-i18n="navService">Service</a>
+          <a href="#offers" data-i18n="navbarOffers">Offers</a>
+          <a href="#contact" data-i18n="navbarContact">Contact</a>
+        </nav>
+
+        <div class="control-row">
+          <button id="theme-toggle" class="icon-button" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
+          <div class="lang-switcher" aria-label="Language switcher" data-i18n-aria-label="languageSwitcher">
+            <button class="lang-option is-active" data-lang-option="en" aria-pressed="true">EN</button>
+            <button class="lang-option" data-lang-option="ar" aria-pressed="false">AR</button>
+          </div>
+          <button id="compare-toggle" class="ghost-button" type="button">Compare <span class="compare-badge" data-compare-count>0</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow" data-i18n="heroEyebrow">Premium Performance</span>
+            <h1 data-i18n="heroTitle">Find the right car for your next signature moment.</h1>
+            <p data-i18n="heroText">Discover premium vehicles engineered for comfort, power, and presence — backed by a refined customer experience and tailored financing.</p>
+            <div class="hero-actions">
+              <a href="inventory.html" class="btn btn-primary" data-i18n="exploreInventory">Explore Inventory</a>
+              <a href="register.html" class="btn btn-secondary" data-i18n="registerViaWhatsApp">Register via WhatsApp</a>
+            </div>
+            <ul class="hero-metrics" aria-label="Dealership stats">
+              <li><strong>120+</strong> <span data-i18n="heroMetric1">Premium Vehicles</span></li>
+              <li><strong>4.9/5</strong> <span data-i18n="heroMetric2">Client Experience</span></li>
+              <li><strong>24/7</strong> <span data-i18n="heroMetric3">Concierge Support</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-gallery" aria-live="polite"></div>
+            <div class="hero-badge">
+              <span data-i18n="featuredOffer">Featured Offer</span>
+              <strong><span data-i18n="offerFrom">From</span> <span data-featured-price>EGP 8,500,000</span></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="categoriesTitle">Browse by Category</h2>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card" data-reveal><div class="icon"><i class="fas fa-car-side"></i></div><h3 data-i18n="categorySUV">SUV</h3></article>
+            <article class="category-card" data-reveal><div class="icon"><i class="fas fa-car"></i></div><h3 data-i18n="categorySedan">Sedan</h3></article>
+            <article class="category-card" data-reveal><div class="icon"><i class="fas fa-tachometer-alt"></i></div><h3 data-i18n="categoryCoupe">Coupe</h3></article>
+            <article class="category-card" data-reveal><div class="icon"><i class="fas fa-rocket"></i></div><h3 data-i18n="categorySports">Sports</h3></article>
+            <article class="category-card" data-reveal><div class="icon"><i class="fas fa-crown"></i></div><h3 data-i18n="categoryLuxury">Luxury</h3></article>
+            <article class="category-card" data-reveal><div class="icon"><i class="fas fa-bolt"></i></div><h3 data-i18n="categoryElectric">Electric</h3></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="interiorTitle">Interior Collection</h2>
+          </div>
+          <p class="section-intro" data-i18n="interiorIntro">Crafted cabin experiences designed for comfort, technology, and confidence.</p>
+          <div class="interior-grid">
+            <article class="interior-card" data-reveal>
+              <img src="pexels-mohit-hambiria-92377455-17339319.jpg" alt="Executive lounge interior" />
+              <div class="interior-card__content">
+                <h3 data-i18n="interiorLounge">Executive Lounge</h3>
+                <p data-i18n="interiorDescription1">Premium leather, ambient lighting, and a cabin designed around effortless comfort.</p>
+              </div>
+            </article>
+            <article class="interior-card" data-reveal>
+              <img src="pexels-jarne-aerts-3175149-6873675.jpg" alt="Driver-focused cabin" />
+              <div class="interior-card__content">
+                <h3 data-i18n="interiorDrive">Driver Focus</h3>
+                <p data-i18n="interiorDescription2">Minimal controls, digital intelligence, and precision surfaces for every trip.</p>
+              </div>
+            </article>
+            <article class="interior-card" data-reveal>
+              <img src="pexels-tima-miroshnichenko-6872585.jpg" alt="Luxury interior detail" />
+              <div class="interior-card__content">
+                <h3 data-i18n="interiorSignature">Signature Finish</h3>
+                <p data-i18n="interiorDescription3">Textured trims, sculpted seats, and a premium atmosphere built to impress.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="ourDepartments">Our Departments</h2>
+          </div>
+          <div class="department-grid">
+            <article class="department-card" data-reveal>
+              <div class="icon"><i class="fas fa-car-side"></i></div>
+              <h3 data-i18n="navSales">Sales</h3>
+              <p data-i18n="deptSalesText">Find the right premium vehicle based on budget, lifestyle, and usage.</p>
+              <a href="sales.html" class="text-link" data-i18n="visitDepartment">Visit department</a>
+            </article>
+            <article class="department-card" data-reveal>
+              <div class="icon"><i class="fas fa-wallet"></i></div>
+              <h3 data-i18n="navFinance">Finance</h3>
+              <p data-i18n="deptFinanceText">Tailored financing and payment plans built around your ownership goals.</p>
+              <a href="finance.html" class="text-link" data-i18n="visitDepartment">Visit department</a>
+            </article>
+            <article class="department-card" data-reveal>
+              <div class="icon"><i class="fas fa-screwdriver-wrench"></i></div>
+              <h3 data-i18n="navService">Service</h3>
+              <p data-i18n="deptServiceText">Keep every performance machine in top form with premium care and support.</p>
+              <a href="service.html" class="text-link" data-i18n="visitDepartment">Visit department</a>
+            </article>
+            <article class="department-card" data-reveal>
+              <div class="icon"><i class="fas fa-user-plus"></i></div>
+              <h3 data-i18n="navRegister">Registration</h3>
+              <p data-i18n="deptRegistrationText">Send your inquiry directly to our WhatsApp team for a quick response.</p>
+              <a href="register.html" class="text-link" data-i18n="registerNow">Register now</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="inventory-preview" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="featuredTitle">Featured Vehicles</h2>
+            <a href="inventory.html" data-i18n="viewAllInventory">View All</a>
+          </div>
+          <div id="featured-vehicles" class="featured-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="whyUsTitle">Why Choose Your Brand</h2>
+          </div>
+          <div class="why-grid">
+            <article class="feature-box">
+              <div class="icon"><i class="fas fa-shield-alt"></i></div>
+              <h3 data-i18n="whyQuality">Certified Quality</h3>
+              <p data-i18n="whyQualityText">Each vehicle undergoes rigorous inspection and complete preparation before delivery.</p>
+            </article>
+            <article class="feature-box">
+              <div class="icon"><i class="fas fa-wallet"></i></div>
+              <h3 data-i18n="whyFinance">Flexible Finance</h3>
+              <p data-i18n="whyFinanceText">Tailored financing and leasing options with fast approvals and transparent terms.</p>
+            </article>
+            <article class="feature-box">
+              <div class="icon"><i class="fas fa-user-check"></i></div>
+              <h3 data-i18n="whyConcierge">Concierge Service</h3>
+              <p data-i18n="whyConciergeText">Expert guidance for every step, from selection to delivery and post-sale support.</p>
+            </article>
+            <article class="feature-box">
+              <div class="icon"><i class="fas fa-gem"></i></div>
+              <h3 data-i18n="whyExclusive">Exclusive Selection</h3>
+              <p data-i18n="whyExclusiveText">Handpicked models chosen for design, performance, comfort, and long-term value.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="offers">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="offersTitle">Featured Deals</h2>
+          </div>
+          <div class="offers-grid">
+            <article class="offer-card">
+              <span class="tag" data-i18n="offerTagLimited">Limited Time</span>
+              <h3>BMW X5 M50i</h3>
+              <p data-i18n="offerLuxuryText">Save up to 3% on premium package upgrades with trade-in assistance.</p>
+              <div class="offer-meta">
+                <span data-i18n="offerEndsSoon">Offer ends soon</span>
+                <span class="price" data-offer-price="bmw-x5-m50i" data-price-mode="discount" data-price-rate="0.03">EGP 465,000</span>
+              </div>
+            </article>
+            <article class="offer-card">
+              <span class="tag" data-i18n="offerTagNew">New Arrival</span>
+              <h3>Tesla Model S Plaid</h3>
+              <p data-i18n="offerElectricText">Zero down payment options available on select electric configurations.</p>
+              <div class="offer-meta">
+                <span data-i18n="offerFrom">From</span>
+                <span class="price" data-offer-price="tesla-model-s-plaid">EGP 12,500,000</span>
+              </div>
+            </article>
+            <article class="offer-card">
+              <span class="tag" data-i18n="offerTagBest">Best Seller</span>
+              <h3>Mercedes-Benz C 63 S</h3>
+              <p data-i18n="offerServiceText">Includes 2-year service plan and premium protection package as standard.</p>
+              <div class="offer-meta">
+                <span data-i18n="offerDiscount">Discount</span>
+                <span class="price" data-offer-price="mercedes-c63-s" data-price-mode="discount" data-price-rate="0.05">EGP 640,000</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="brandsTitle">Brand Showcase</h2>
+          </div>
+          <div class="brand-showcase">
+            <div class="brand-pill">
+              <img class="brand-pill__logo" src="assets/brands/audi.svg" alt="" />
+              <span class="brand-pill__wordmark">Audi</span>
+            </div>
+            <div class="brand-pill">
+              <img class="brand-pill__logo" src="assets/brands/bmw.svg" alt="" />
+              <span class="brand-pill__wordmark">BMW</span>
+            </div>
+            <div class="brand-pill">
+              <svg class="brand-pill__logo brand-pill__logo--mercedes" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M24 24V5M24 24 7.55 33.5M24 24l16.45 9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+              </svg>
+              <span class="brand-pill__wordmark">Mercedes-Benz</span>
+            </div>
+            <div class="brand-pill">
+              <img class="brand-pill__logo" src="assets/brands/tesla.svg" alt="" />
+              <span class="brand-pill__wordmark">Tesla</span>
+            </div>
+            <div class="brand-pill">
+              <img class="brand-pill__logo" src="assets/brands/porsche.svg" alt="" />
+              <span class="brand-pill__wordmark">Porsche</span>
+            </div>
+            <div class="brand-pill">
+              <img class="brand-pill__logo" src="assets/brands/ferrari.svg" alt="" />
+              <span class="brand-pill__wordmark">Ferrari</span>
+            </div>
+            <div class="brand-pill">
+              <svg class="brand-pill__logo brand-pill__logo--lexus" viewBox="0 0 48 48" aria-hidden="true">
+                <ellipse cx="24" cy="24" rx="21" ry="14" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M31 12 19 32h-6l12-20z" fill="currentColor" />
+              </svg>
+              <span class="brand-pill__wordmark">Lexus</span>
+            </div>
+            <div class="brand-pill">
+              <svg class="brand-pill__logo brand-pill__logo--range-rover" viewBox="0 0 48 48" aria-hidden="true">
+                <ellipse cx="24" cy="24" rx="21" ry="15" fill="none" stroke="currentColor" stroke-width="1.5" />
+                <text x="24" y="29" text-anchor="middle" fill="currentColor" font-family="Georgia, serif" font-size="15" font-weight="700" letter-spacing="-1">RR</text>
+              </svg>
+              <span class="brand-pill__wordmark">Range Rover</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="testimonialsTitle">Customer Testimonials</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <span class="badge" data-i18n="demoContent">Demo Content</span>
+              <blockquote data-i18n="testimonialOne">“The selection, transparency, and support were exceptional. The entire process felt premium from start to finish.”</blockquote>
+              <div class="author">
+                <div class="avatar">AK</div>
+                <div><strong>Ali K.</strong><br><small>BMW M Series</small></div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <span class="badge" data-i18n="demoContent">Demo Content</span>
+              <blockquote data-i18n="testimonialTwo">“We found the exact SUV we wanted with flexible finance and a stress-free delivery walkthrough.”</blockquote>
+              <div class="author">
+                <div class="avatar">SM</div>
+                <div><strong>Sara M.</strong><br><small>Range Rover Sport</small></div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <span class="badge" data-i18n="demoContent">Demo Content</span>
+              <blockquote data-i18n="testimonialThree">“The team understood our preferences immediately and presented options that matched our lifestyle perfectly.”</blockquote>
+              <div class="author">
+                <div class="avatar">NT</div>
+                <div><strong>Nasir T.</strong><br><small>Porsche 911</small></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="newsTitle">Latest Automotive News</h2>
+          </div>
+          <div class="news-grid">
+            <article class="news-card">
+              <img src="pexels-photobombcars-11202317.jpg" alt="Electric vehicle news" />
+              <div class="news-card__content">
+                <div class="meta"><span data-i18n="newsCategoryIndustry">Industry</span><span>April 12</span></div>
+                <h3 data-i18n="newsOneTitle">Electric luxury performance is shifting the market landscape.</h3>
+                <p data-i18n="newsOneText">Learn how premium brands are rebalancing range, performance, and charging convenience.</p>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="pexels-a2pro-6509107.jpg" alt="Performance drive story" />
+              <div class="news-card__content">
+                <div class="meta"><span data-i18n="newsCategoryPerformance">Performance</span><span>April 19</span></div>
+                <h3 data-i18n="newsTwoTitle">What defines the modern grand tourer in 2025?</h3>
+                <p data-i18n="newsTwoText">Comfort, torque, and digital integration are changing what luxury driving means.</p>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="pexels-lgorincioi-8265503.jpg" alt="SUV and family mobility" />
+              <div class="news-card__content">
+                <div class="meta"><span data-i18n="newsCategoryMobility">Mobility</span><span>April 23</span></div>
+                <h3 data-i18n="newsThreeTitle">Luxury SUVs remain the benchmark for family-first travel.</h3>
+                <p data-i18n="newsThreeText">Discover how features like adaptive suspension and interior tech are setting new standards.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="contactTitle">Visit Our Showroom</h2>
+          </div>
+
+          <div class="contact-wrap">
+            <div class="contact-details">
+              <h3 data-i18n="showroomName">Your Brand Showroom</h3>
+              <p data-i18n="showroomDescription">Experience our latest collection in person with a tailored consultation and test-drive schedule.</p>
+              <ul class="contact-list">
+                <li class="contact-row">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <strong data-i18n="address">Address</strong><br>
+                    <span>18 Zamalek Street, Downtown Cairo, Egypt</span>
+                  </div>
+                </li>
+                <li class="contact-row">
+                  <i class="fas fa-phone"></i>
+                  <div>
+                    <strong data-i18n="phone">Phone</strong><br>
+                    <span data-i18n="registerPhonePlaceholder">010xxxxxxxx</span>
+                  </div>
+                </li>
+                <li class="contact-row">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <strong data-i18n="email">Email</strong><br>
+                    <span data-i18n="contactEmailText">hello@yourbrand.example</span>
+                  </div>
+                </li>
+                <li class="contact-row">
+                  <i class="fas fa-clock"></i>
+                  <div>
+                    <strong data-i18n="hours">Hours</strong><br>
+                    <span data-i18n="contactHoursText">Mon-Sat: 9:00 AM - 8:00 PM</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+ 
+            <div class="map-placeholder">
+              <iframe
+                class="map-frame"
+                src="https://www.google.com/maps?q=Cairo%20Downtown%2C%20Egypt&z=13&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Your Brand showroom location map"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand" aria-label="Your Brand footer logo">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>Your Brand</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="inventory.html">Inventory</a>
+          <a href="#about">About</a>
+          <a href="#offers">Offers</a>
+          <a href="#contact">Contact</a>
+          <a href="register.html">Register</a>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <aside id="compare-panel" class="compare-panel" aria-label="Vehicle comparison panel" data-i18n-aria-label="compareTitle" aria-hidden="true">
+      <div class="compare-panel__header">
+        <h3 data-i18n="compareTitle">Comparison Board</h3>
+        <button id="compare-close" class="icon-button" type="button" aria-label="Close comparison panel" data-i18n-aria-label="closeComparison"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="compare-panel__body">
+        <table id="compare-table" class="compare-table"></table>
+      </div>
+    </aside>
+
+    <aside id="assistant-widget" class="assistant-widget" aria-live="polite">
+      <div class="assistant-header">
+        <strong><span class="dot"></span> <span data-i18n="assistantTitle">Dealership Assistant</span></strong>
+        <div class="assistant-actions">
+          <button id="assistant-minimize" type="button" aria-label="Minimize assistant"><i class="fas fa-window-minimize"></i></button>
+          <button id="assistant-close" type="button" aria-label="Close assistant"><i class="fas fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="assistant-body">
+        <div id="assistant-output" class="assistant-message" data-i18n="assistantDefault">I can recommend vehicles from the current inventory, explain differences, and help you book a test drive.</div>
+      </div>
+      <div class="assistant-form">
+        <form id="assistant-form">
+          <input id="assistant-input" type="text" data-i18n-placeholder="assistantPlaceholder" placeholder="Ask about budget, features, or vehicle matching…" />
+          <button type="submit" data-i18n="assistantAsk">Ask</button>
+        </form>
+      </div>
+    </aside>
+
+    <button id="assistant-toggle" class="btn btn-primary assistant-reopen" type="button" data-i18n="assistantOpen">Open Assistant</button>
+  </body>
+</html>
